@@ -1,0 +1,9 @@
+sendmsg(12, {msg_name=NULL, msg_namelen=0, msg_iov=[{iov_base="\0", iov_len=1}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, MSG_NOSIGNAL) = 1
+write(1, "----testing syscall [sendfile] begin----\n", 41) = 41
+sendfile(-1, -1, NULL, 67108864)        = -1 EBADF (Bad file descriptor)
+write(1, "----testing syscall [sendfile] end----\n", 39) = 39
+sendmsg(12, {msg_name=NULL, msg_namelen=0, msg_iov=[{iov_base="\0", iov_len=1}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, MSG_NOSIGNAL) = 1
+futex(0x7f4cd675a1f0, FUTEX_WAIT, 1, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+shutdown(6, SHUT_RDWR)                  = 0
+exit_group(0)                           = ?
++++ exited with 0 +++

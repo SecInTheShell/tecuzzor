@@ -1,0 +1,3 @@
+---- calling fuzzer_types::calls::fs::Open: {"pathname":[46,47,116,101,115,116,49,46,116,120,116],"flags":1}
+---- result from fuzzer_types::calls::fs::Open syscall: Ok(3)
+---- after fuzzer_types::calls::fs::Open: {"pathname":[46,47,116,101,115,116,49,46,116,120,116],"flags":1}

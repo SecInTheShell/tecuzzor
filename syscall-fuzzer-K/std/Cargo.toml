@@ -1,0 +1,14 @@
+[package]
+name    = "linux-std"
+version = "0.1.0"
+
+# Generate bindings for kernel functions
+# build = "build.rs"
+
+[build-dependencies]
+# bindgen = "0.46"
+shlex   = "0.1"
+
+[dependencies]
+# libc = { path = "../libc" }
+serde = { version = "1.0", default-features = false, features = ["derive", "rc"] }

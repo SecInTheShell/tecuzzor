@@ -1,0 +1,27 @@
+# /fuzzer_types
+
+# Rust
+/target
+Cargo.lock
+
+# Editor
+.vscode
+.tmp_versions
+
+# Kernel Module
+
+.cache.mk
+*.cmd
+*.o
+*.ko
+*.symvers
+*.order
+*.mod.c
+*.mod
+
+# Analyzer
+/__pycache__
+analyzer_results
+
+# Logs
+stage2-logs

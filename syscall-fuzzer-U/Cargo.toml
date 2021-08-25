@@ -1,0 +1,28 @@
+[package]
+name = "syscall_fuzzer"
+version = "0.1.0"
+authors = ["ya0guang <hbchen001@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+default = []
+type_only = ["fuzzer_types/type_only"]
+ez_mode = []
+
+[lib]
+proc-macro = false
+
+[dependencies]
+serde_json = "1.0"
+fuzzer_macro = {path = "./fuzzer_macro"}
+dec_macro = {path = "./dec_macro"}
+fuzzer_types = {path = "./fuzzer_types"}
+syscalls = "0.3.2"
+libc = {path = "./libc"}
+rand = "0.8.0"
+syn = "1"
+quote = "1"
+clap = "2.33"
+lazy_static = "1.4"

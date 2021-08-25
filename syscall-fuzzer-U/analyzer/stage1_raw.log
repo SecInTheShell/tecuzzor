@@ -1,0 +1,88 @@
+execve("./coverage-test", ["./coverage-test"], 0x7ffd11665140 /* 45 vars */) = 0
+brk(NULL)                               = 0x55c624b73000
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=135098, ...}) = 0
+mmap(NULL, 135098, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fe3cbcf7000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\20\35\2\0\0\0\0\0@\0\0\0\0\0\0\0\20\353\36\0\0\0\0\0\0\0\0\0@\0008\0\n\0@\0I\0H\0\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0000\2\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=2030928, ...}) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fe3cbcf5000
+mmap(NULL, 4131552, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fe3cb6fe000
+mprotect(0x7fe3cb8e5000, 2097152, PROT_NONE) = 0
+mmap(0x7fe3cbae5000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e7000) = 0x7fe3cbae5000
+mmap(0x7fe3cbaeb000, 15072, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fe3cbaeb000
+close(3)                                = 0
+arch_prctl(ARCH_SET_FS, 0x7fe3cbcf64c0) = 0
+mprotect(0x7fe3cbae5000, 16384, PROT_READ) = 0
+mprotect(0x55c624168000, 4096, PROT_READ) = 0
+mprotect(0x7fe3cbd18000, 4096, PROT_READ) = 0
+munmap(0x7fe3cbcf7000, 135098)          = 0
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 4), ...}) = 0
+brk(NULL)                               = 0x55c624b73000
+brk(0x55c624b94000)                     = 0x55c624b94000
+write(1, "##### test begins #####\n", 24) = 24
+write(1, "****fuzzing interface [time]****\n", 33) = 33
+write(1, "----testing syscall [time] begin ----\n", 38) = 38
+time(NULL)                              = 1614626287 (2021-03-01T14:18:07-0500)
+write(1, "----testing syscall [time] end ----\n", 36) = 36
+write(1, "Seconds since the Epoch (1 Jan 1970): 1614626287 (about 51.166 years)\n", 70) = 70
+write(1, "----testing syscall [gettimeofday] begin ----\n", 46) = 46
+gettimeofday({tv_sec=1614626287, tv_usec=540561}, NULL) = 0
+write(1, "----testing syscall [gettimeofday] end ----\n", 44) = 44
+write(1, "Default gettimeofday() returned 1614626287 secs, 540561 microsecs\n", 66) = 66
+write(1, "----testing syscall [gettimeofday] begin ----\n", 46) = 46
+gettimeofday({tv_sec=1614626287, tv_usec=540655}, {tz_minuteswest=0, tz_dsttime=0}) = 0
+write(1, "----testing syscall [gettimeofday] end ----\n", 44) = 44
+write(1, "TimeZone-1 = 0\n", 15)        = 15
+write(1, "TimeZone-2 = 0\n", 15)        = 15
+write(1, "****fuzzing interface [fileio]****\n", 35) = 35
+write(1, "I/O test with sendfile() and related system calls.\n", 51) = 51
+write(1, "Allocating 64 MB buffer:\n", 25) = 25
+mmap(NULL, 67112960, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fe3c76fd000
+write(1, "DONE\n", 5)                   = 5
+write(1, "Writing data to first buffer:\n", 30) = 30
+write(1, "----testing syscall [open] begin ----\n", 38) = 38
+open("buffer1", O_RDONLY)               = -1 ENOENT (No such file or directory)
+write(1, "----testing syscall [open] end ----\n", 36) = 36
+write(1, "----testing syscall [write] begin ----\n", 39) = 39
+write(-1, "\20\320o\307\343\177\0\0\0\307aR\210\307\35f\360D\230S\377\177\0\0\316x\366#\306U\0\0\340\201\366#\306U\0\0\367\373q\313\343\177\0\0\1\0\0\0\0\0\0\0\330E\230S\377\177\0\0\0\200\0\0\1\0\0\0\252x\366#\306U\0\0\0\0\0\0\0\0\0\0$\340\n\225\250g\306C\240w\366#"..., 67108864) = -1 EBADF (Bad file descriptor)
+write(1, "----testing syscall [write] end ----\n", 37) = 37
+write(1, "----testing syscall [close] begin ----\n", 39) = 39
+close(-1)                               = -1 EBADF (Bad file descriptor)
+write(1, "----testing syscall [close] end ----\n", 37) = 37
+write(1, "DONE\n", 5)                   = 5
+write(1, "Copying data from first file to second:\n", 40) = 40
+write(1, "----testing syscall [open] begin ----\n", 38) = 38
+open("buffer1", O_RDONLY)               = -1 ENOENT (No such file or directory)
+write(1, "----testing syscall [open] end ----\n", 36) = 36
+write(1, "----testing syscall [open] begin ----\n", 38) = 38
+open("buffer2", O_RDONLY)               = -1 ENOENT (No such file or directory)
+write(1, "----testing syscall [open] end ----\n", 36) = 36
+write(1, "----testing syscall [sendfile] begin ----\n", 42) = 42
+sendfile(-1, -1, NULL, 67108864)        = -1 EBADF (Bad file descriptor)
+write(1, "----testing syscall [sendfile] end ----\n", 40) = 40
+write(1, "----testing syscall [close] begin ----\n", 39) = 39
+close(-1)                               = -1 EBADF (Bad file descriptor)
+write(1, "----testing syscall [close] end ----\n", 37) = 37
+write(1, "----testing syscall [close] begin ----\n", 39) = 39
+close(-1)                               = -1 EBADF (Bad file descriptor)
+write(1, "----testing syscall [close] end ----\n", 37) = 37
+write(1, "DONE\n", 5)                   = 5
+write(1, "Freeing buffer:\n", 16)       = 16
+munmap(0x7fe3c76fd000, 67112960)        = 0
+write(1, "DONE\n", 5)                   = 5
+write(1, "Deleting files:\n", 16)       = 16
+write(1, "----testing syscall [unlink] begin ----\n", 40) = 40
+unlink("buffer1")                       = -1 ENOENT (No such file or directory)
+write(1, "----testing syscall [unlink] end ----\n", 38) = 38
+write(1, "----testing syscall [unlink] begin ----\n", 40) = 40
+unlink("buffer2")                       = -1 ENOENT (No such file or directory)
+write(1, "----testing syscall [unlink] end ----\n", 38) = 38
+write(1, "DONE\n", 5)                   = 5
+write(1, "##### test ends #####\n", 22) = 22
+exit_group(0)                           = ?
++++ exited with 0 +++

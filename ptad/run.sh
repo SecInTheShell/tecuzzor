@@ -1,0 +1,1 @@
+(./getdbg.sh &);./main

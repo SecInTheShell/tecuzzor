@@ -1,0 +1,274 @@
+INFO: Fuzzer will always obey the calling conventions and consider the semantics
+---- calling fuzzer_types::calls::fs::Open: {"pathname":[46,47,116,101,115,116,49,46,116,120,116],"flags":1}
+---- result from fuzzer_types::calls::fs::Open syscall: Ok(3)
+---- after fuzzer_types::calls::fs::Open: {"pathname":[46,47,116,101,115,116,49,46,116,120,116],"flags":1}
+---- calling fuzzer_types::calls::fs::Close: {"fd":3}
+---- result from fuzzer_types::calls::fs::Close syscall: Ok(0)
+---- after fuzzer_types::calls::fs::Close: {"fd":3}
+---- calling fuzzer_types::calls::fs::Write: {"fd":3,"buf":[],"count":0}
+---- result from fuzzer_types::calls::fs::Write syscall: Ok(0)
+---- after fuzzer_types::calls::fs::Write: {"fd":3,"buf":[],"count":0}
+---- calling fuzzer_types::calls::fs::Read: {"fd":4,"buf":[0,0,0,0,0,0,0],"count":7}
+---- result from fuzzer_types::calls::fs::Read syscall: Ok(7)
+---- after fuzzer_types::calls::fs::Read: {"fd":4,"buf":[1,0,0,0,0,0,0],"count":7}
+---- calling fuzzer_types::calls::fs::Fstat: {"fd":5,"statbuf":{"st_dev":0,"st_ino":0,"st_nlink":0,"st_mode":0,"st_uid":0,"st_gid":0,"__pad0":0,"st_rdev":0,"st_size":0,"st_blksize":0,"st_blocks":0,"st_atime":0,"st_atime_nsec":0,"st_mtime":0,"st_mtime_nsec":0,"st_ctime":0,"st_ctime_nsec":0,"__unused":[0,0,0]}}
+---- result from fuzzer_types::calls::fs::Fstat syscall: Ok(0)
+---- after fuzzer_types::calls::fs::Fstat: {"fd":5,"statbuf":{"st_dev":66309,"st_ino":2228231,"st_nlink":1,"st_mode":33188,"st_uid":1000,"st_gid":1000,"__pad0":0,"st_rdev":0,"st_size":4614,"st_blksize":4096,"st_blocks":16,"st_atime":1627010280,"st_atime_nsec":139429898,"st_mtime":1627010280,"st_mtime_nsec":139429898,"st_ctime":1627010280,"st_ctime_nsec":139429898,"__unused":[0,0,0]}}
+---- calling fuzzer_types::calls::fs::Stat: {"pathname":[46,47,116,101,115,116,49,46,116,120,116],"statbuf":{"st_dev":0,"st_ino":0,"st_nlink":0,"st_mode":0,"st_uid":0,"st_gid":0,"__pad0":0,"st_rdev":0,"st_size":0,"st_blksize":0,"st_blocks":0,"st_atime":0,"st_atime_nsec":0,"st_mtime":0,"st_mtime_nsec":0,"st_ctime":0,"st_ctime_nsec":0,"__unused":[0,0,0]}}
+---- result from fuzzer_types::calls::fs::Stat syscall: Ok(0)
+---- after fuzzer_types::calls::fs::Stat: {"pathname":[46,47,116,101,115,116,49,46,116,120,116],"statbuf":{"st_dev":66309,"st_ino":2228231,"st_nlink":1,"st_mode":33188,"st_uid":1000,"st_gid":1000,"__pad0":0,"st_rdev":0,"st_size":4614,"st_blksize":4096,"st_blocks":16,"st_atime":1627010280,"st_atime_nsec":139429898,"st_mtime":1627010280,"st_mtime_nsec":139429898,"st_ctime":1627010280,"st_ctime_nsec":139429898,"__unused":[0,0,0]}}
+---- calling fuzzer_types::calls::fs::Lstat: {"pathname":[46,47,116,101,115,116,49,46,116,120,116],"statbuf":{"st_dev":0,"st_ino":0,"st_nlink":0,"st_mode":0,"st_uid":0,"st_gid":0,"__pad0":0,"st_rdev":0,"st_size":0,"st_blksize":0,"st_blocks":0,"st_atime":0,"st_atime_nsec":0,"st_mtime":0,"st_mtime_nsec":0,"st_ctime":0,"st_ctime_nsec":0,"__unused":[0,0,0]}}
+---- result from fuzzer_types::calls::fs::Lstat syscall: Ok(0)
+---- after fuzzer_types::calls::fs::Lstat: {"pathname":[46,47,116,101,115,116,49,46,116,120,116],"statbuf":{"st_dev":66309,"st_ino":2228231,"st_nlink":1,"st_mode":33188,"st_uid":1000,"st_gid":1000,"__pad0":0,"st_rdev":0,"st_size":4614,"st_blksize":4096,"st_blocks":16,"st_atime":1627010280,"st_atime_nsec":139429898,"st_mtime":1627010280,"st_mtime_nsec":139429898,"st_ctime":1627010280,"st_ctime_nsec":139429898,"__unused":[0,0,0]}}
+---- calling fuzzer_types::calls::fs::Poll: {"fds":[{"fd":6,"events":2,"revents":0},{"fd":7,"events":32,"revents":0},{"fd":8,"events":2,"revents":0},{"fd":9,"events":256,"revents":0},{"fd":10,"events":64,"revents":0},{"fd":11,"events":64,"revents":0},{"fd":12,"events":32,"revents":0},{"fd":13,"events":512,"revents":0},{"fd":14,"events":2,"revents":0},{"fd":15,"events":32,"revents":0},{"fd":16,"events":16,"revents":0},{"fd":17,"events":128,"revents":0},{"fd":18,"events":1,"revents":0},{"fd":19,"events":128,"revents":0}],"nfds":14,"timeout":2073}
+---- result from fuzzer_types::calls::fs::Poll syscall: Ok(4)
+---- after fuzzer_types::calls::fs::Poll: {"fds":[{"fd":6,"events":2,"revents":0},{"fd":7,"events":32,"revents":0},{"fd":8,"events":2,"revents":0},{"fd":9,"events":256,"revents":256},{"fd":10,"events":64,"revents":64},{"fd":11,"events":64,"revents":64},{"fd":12,"events":32,"revents":0},{"fd":13,"events":512,"revents":0},{"fd":14,"events":2,"revents":0},{"fd":15,"events":32,"revents":0},{"fd":16,"events":16,"revents":0},{"fd":17,"events":128,"revents":0},{"fd":18,"events":1,"revents":1},{"fd":19,"events":128,"revents":0}],"nfds":14,"timeout":2073}
+---- calling fuzzer_types::calls::fs::Lseek: {"fd":20,"offset":-4355950886587642120,"whence":0}
+---- result from fuzzer_types::calls::fs::Lseek syscall: Err(22)
+---- after fuzzer_types::calls::fs::Lseek: {"fd":20,"offset":-4355950886587642120,"whence":0}
+---- calling fuzzer_types::calls::fs::Pread64: {"fd":22,"buf":[0,0,0,0,0,0,0],"arg_count":7,"offset":-8882356712192906259}
+---- result from fuzzer_types::calls::fs::Pread64 syscall: Err(22)
+---- after fuzzer_types::calls::fs::Pread64: {"fd":22,"buf":[0,0,0,0,0,0,0],"arg_count":7,"offset":-8882356712192906259}
+---- calling fuzzer_types::calls::fs::Pwrite64: {"fd":23,"buf":[11,96,63,113,52,10],"arg_count":6,"offset":0}
+---- result from fuzzer_types::calls::fs::Pwrite64 syscall: Ok(6)
+---- after fuzzer_types::calls::fs::Pwrite64: {"fd":23,"buf":[11,96,63,113,52,10],"arg_count":6,"offset":0}
+---- calling fuzzer_types::calls::fs::Writev: {"fd":24,"iov":[{"iov_base":[122,18,37,57,68,45,2,40,100,22,74],"iov_len":11},{"iov_base":[117,125,90,120,0,105,77,92,38,6,93,70,9,41,93],"iov_len":15}],"iovcnt":2}
+---- result from fuzzer_types::calls::fs::Writev syscall: Ok(26)
+---- after fuzzer_types::calls::fs::Writev: {"fd":24,"iov":[{"iov_base":[122,18,37,57,68,45,2,40,100,22,74],"iov_len":11},{"iov_base":[117,125,90,120,0,105,77,92,38,6,93,70,9,41,93],"iov_len":15}],"iovcnt":2}
+---- calling fuzzer_types::calls::fs::Readv: {"fd":25,"iov":[{"iov_base":[0,0,0,0,0,0,0,0,0,0,0,0],"iov_len":12},{"iov_base":[0,0,0,0,0,0,0],"iov_len":7},{"iov_base":[0,0,0,0,0,0,0],"iov_len":7},{"iov_base":[],"iov_len":0},{"iov_base":[0,0,0,0,0,0,0],"iov_len":7},{"iov_base":[0,0,0,0,0,0,0,0,0,0,0,0],"iov_len":12},{"iov_base":[0,0,0,0],"iov_len":4},{"iov_base":[0,0,0,0,0],"iov_len":5},{"iov_base":[0,0,0,0],"iov_len":4},{"iov_base":[0,0,0,0,0,0,0,0,0,0],"iov_len":10},{"iov_base":[0,0,0,0,0,0,0,0,0,0],"iov_len":10},{"iov_base":[0,0,0,0,0,0,0,0,0,0,0,0,0,0],"iov_len":14},{"iov_base":[0,0],"iov_len":2}],"iovcnt":13}
+---- result from fuzzer_types::calls::fs::Readv syscall: Ok(94)
+---- after fuzzer_types::calls::fs::Readv: {"fd":25,"iov":[{"iov_base":[0,0,0,0,0,0,0,0,0,0,0,0],"iov_len":12},{"iov_base":[0,0,0,0,0,0,0],"iov_len":7},{"iov_base":[0,0,0,0,0,0,0],"iov_len":7},{"iov_base":[],"iov_len":0},{"iov_base":[0,0,0,0,0,0,0],"iov_len":7},{"iov_base":[0,0,0,0,0,0,0,0,0,0,0,0],"iov_len":12},{"iov_base":[0,0,0,0],"iov_len":4},{"iov_base":[0,0,0,0,0],"iov_len":5},{"iov_base":[0,0,0,0],"iov_len":4},{"iov_base":[0,0,0,0,0,0,0,0,0,0],"iov_len":10},{"iov_base":[0,0,0,0,0,0,0,0,0,0],"iov_len":10},{"iov_base":[0,0,0,0,0,0,0,0,0,0,0,0,0,0],"iov_len":14},{"iov_base":[0,0],"iov_len":2}],"iovcnt":13}
+---- calling fuzzer_types::calls::fs::Access: {"pathname":[46,47,116,101,115,116,49,46,116,120,116],"mode":0}
+---- result from fuzzer_types::calls::fs::Access syscall: Ok(0)
+---- after fuzzer_types::calls::fs::Access: {"pathname":[46,47,116,101,115,116,49,46,116,120,116],"mode":0}
+---- calling fuzzer_types::calls::fs::Pipe: {"pipefd":[0,0]}
+---- result from fuzzer_types::calls::fs::Pipe syscall: Ok(0)
+---- after fuzzer_types::calls::fs::Pipe: {"pipefd":[26,27]}
+end
+---- calling fuzzer_types::calls::fs::Open: {"pathname":[46,47,116,101,115,116,49,46,116,120,116],"flags":0}
+---- result from fuzzer_types::calls::fs::Open syscall: Ok(3)
+---- after fuzzer_types::calls::fs::Open: {"pathname":[46,47,116,101,115,116,49,46,116,120,116],"flags":0}
+---- calling fuzzer_types::calls::fs::Close: {"fd":3}
+---- result from fuzzer_types::calls::fs::Close syscall: Ok(0)
+---- after fuzzer_types::calls::fs::Close: {"fd":3}
+---- calling fuzzer_types::calls::fs::Write: {"fd":3,"buf":[50,83,56,50,61,44,76,29,60,56,64],"count":11}
+---- result from fuzzer_types::calls::fs::Write syscall: Err(9)
+---- after fuzzer_types::calls::fs::Write: {"fd":3,"buf":[50,83,56,50,61,44,76,29,60,56,64],"count":11}
+---- calling fuzzer_types::calls::fs::Read: {"fd":4,"buf":[0,0],"count":2}
+---- result from fuzzer_types::calls::fs::Read syscall: Err(9)
+---- after fuzzer_types::calls::fs::Read: {"fd":4,"buf":[0,0],"count":2}
+---- calling fuzzer_types::calls::fs::Fstat: {"fd":5,"statbuf":{"st_dev":0,"st_ino":0,"st_nlink":0,"st_mode":0,"st_uid":0,"st_gid":0,"__pad0":0,"st_rdev":0,"st_size":0,"st_blksize":0,"st_blocks":0,"st_atime":0,"st_atime_nsec":0,"st_mtime":0,"st_mtime_nsec":0,"st_ctime":0,"st_ctime_nsec":0,"__unused":[0,0,0]}}
+---- result from fuzzer_types::calls::fs::Fstat syscall: Ok(0)
+---- after fuzzer_types::calls::fs::Fstat: {"fd":5,"statbuf":{"st_dev":66309,"st_ino":2228231,"st_nlink":1,"st_mode":33188,"st_uid":1000,"st_gid":1000,"__pad0":0,"st_rdev":0,"st_size":4614,"st_blksize":4096,"st_blocks":16,"st_atime":1627010280,"st_atime_nsec":139429898,"st_mtime":1627010299,"st_mtime_nsec":859429152,"st_ctime":1627010299,"st_ctime_nsec":859429152,"__unused":[0,0,0]}}
+---- calling fuzzer_types::calls::fs::Stat: {"pathname":[46,47,116,101,115,116,49,46,116,120,116],"statbuf":{"st_dev":0,"st_ino":0,"st_nlink":0,"st_mode":0,"st_uid":0,"st_gid":0,"__pad0":0,"st_rdev":0,"st_size":0,"st_blksize":0,"st_blocks":0,"st_atime":0,"st_atime_nsec":0,"st_mtime":0,"st_mtime_nsec":0,"st_ctime":0,"st_ctime_nsec":0,"__unused":[0,0,0]}}
+---- result from fuzzer_types::calls::fs::Stat syscall: Ok(0)
+---- after fuzzer_types::calls::fs::Stat: {"pathname":[46,47,116,101,115,116,49,46,116,120,116],"statbuf":{"st_dev":66309,"st_ino":2228231,"st_nlink":1,"st_mode":33188,"st_uid":1000,"st_gid":1000,"__pad0":0,"st_rdev":0,"st_size":4614,"st_blksize":4096,"st_blocks":16,"st_atime":1627010280,"st_atime_nsec":139429898,"st_mtime":1627010299,"st_mtime_nsec":859429152,"st_ctime":1627010299,"st_ctime_nsec":859429152,"__unused":[0,0,0]}}
+---- calling fuzzer_types::calls::fs::Lstat: {"pathname":[46,47,116,101,115,116,49,46,116,120,116],"statbuf":{"st_dev":0,"st_ino":0,"st_nlink":0,"st_mode":0,"st_uid":0,"st_gid":0,"__pad0":0,"st_rdev":0,"st_size":0,"st_blksize":0,"st_blocks":0,"st_atime":0,"st_atime_nsec":0,"st_mtime":0,"st_mtime_nsec":0,"st_ctime":0,"st_ctime_nsec":0,"__unused":[0,0,0]}}
+---- result from fuzzer_types::calls::fs::Lstat syscall: Ok(0)
+---- after fuzzer_types::calls::fs::Lstat: {"pathname":[46,47,116,101,115,116,49,46,116,120,116],"statbuf":{"st_dev":66309,"st_ino":2228231,"st_nlink":1,"st_mode":33188,"st_uid":1000,"st_gid":1000,"__pad0":0,"st_rdev":0,"st_size":4614,"st_blksize":4096,"st_blocks":16,"st_atime":1627010280,"st_atime_nsec":139429898,"st_mtime":1627010299,"st_mtime_nsec":859429152,"st_ctime":1627010299,"st_ctime_nsec":859429152,"__unused":[0,0,0]}}
+---- calling fuzzer_types::calls::fs::Poll: {"fds":[{"fd":6,"events":2,"revents":0},{"fd":7,"events":16,"revents":0},{"fd":8,"events":4,"revents":0},{"fd":9,"events":32,"revents":0},{"fd":10,"events":128,"revents":0},{"fd":11,"events":1,"revents":0},{"fd":12,"events":256,"revents":0},{"fd":13,"events":64,"revents":0},{"fd":14,"events":2,"revents":0},{"fd":15,"events":64,"revents":0},{"fd":16,"events":128,"revents":0}],"nfds":11,"timeout":2179}
+---- result from fuzzer_types::calls::fs::Poll syscall: Ok(5)
+---- after fuzzer_types::calls::fs::Poll: {"fds":[{"fd":6,"events":2,"revents":0},{"fd":7,"events":16,"revents":0},{"fd":8,"events":4,"revents":4},{"fd":9,"events":32,"revents":0},{"fd":10,"events":128,"revents":0},{"fd":11,"events":1,"revents":1},{"fd":12,"events":256,"revents":256},{"fd":13,"events":64,"revents":64},{"fd":14,"events":2,"revents":0},{"fd":15,"events":64,"revents":64},{"fd":16,"events":128,"revents":0}],"nfds":11,"timeout":2179}
+---- calling fuzzer_types::calls::fs::Lseek: {"fd":17,"offset":-2485741268360775565,"whence":1}
+---- result from fuzzer_types::calls::fs::Lseek syscall: Err(22)
+---- after fuzzer_types::calls::fs::Lseek: {"fd":17,"offset":-2485741268360775565,"whence":1}
+---- calling fuzzer_types::calls::fs::Pread64: {"fd":18,"buf":[0,0,0,0,0],"arg_count":5,"offset":494134966608696898}
+---- result from fuzzer_types::calls::fs::Pread64 syscall: Ok(0)
+---- after fuzzer_types::calls::fs::Pread64: {"fd":18,"buf":[0,0,0,0,0],"arg_count":5,"offset":494134966608696898}
+---- calling fuzzer_types::calls::fs::Pwrite64: {"fd":19,"buf":[39,117,111,46,46],"arg_count":5,"offset":0}
+---- result from fuzzer_types::calls::fs::Pwrite64 syscall: Err(9)
+---- after fuzzer_types::calls::fs::Pwrite64: {"fd":19,"buf":[39,117,111,46,46],"arg_count":5,"offset":0}
+---- calling fuzzer_types::calls::fs::Writev: {"fd":20,"iov":[{"iov_base":[104,79,96,32,66,20,77,40],"iov_len":8},{"iov_base":[],"iov_len":0},{"iov_base":[125,85,46,89,111,120,13,54,68,115,81,74,35],"iov_len":13},{"iov_base":[81,30,86],"iov_len":3},{"iov_base":[104,27],"iov_len":2},{"iov_base":[75,45,111,110,107,43,0,105,91,28,69,74,57,3],"iov_len":14},{"iov_base":[82,70,57,97,59],"iov_len":5},{"iov_base":[10,63,103,102,32,36,66],"iov_len":7},{"iov_base":[56,117,103,22,62,25,28,37,75,56,87],"iov_len":11},{"iov_base":[30,83,84,112,34,84,113,7,25,54,104,16],"iov_len":12},{"iov_base":[116,27,76,74,121,8],"iov_len":6},{"iov_base":[32,106,96,22,70,17,70,10,65,4,86,78,89,25,66],"iov_len":15},{"iov_base":[72,126,124,123,48,125,30],"iov_len":7},{"iov_base":[112,90,122,97,94,72,13,34,28,22,57,49,101,88],"iov_len":14}],"iovcnt":14}
+---- result from fuzzer_types::calls::fs::Writev syscall: Ok(117)
+---- after fuzzer_types::calls::fs::Writev: {"fd":20,"iov":[{"iov_base":[104,79,96,32,66,20,77,40],"iov_len":8},{"iov_base":[],"iov_len":0},{"iov_base":[125,85,46,89,111,120,13,54,68,115,81,74,35],"iov_len":13},{"iov_base":[81,30,86],"iov_len":3},{"iov_base":[104,27],"iov_len":2},{"iov_base":[75,45,111,110,107,43,0,105,91,28,69,74,57,3],"iov_len":14},{"iov_base":[82,70,57,97,59],"iov_len":5},{"iov_base":[10,63,103,102,32,36,66],"iov_len":7},{"iov_base":[56,117,103,22,62,25,28,37,75,56,87],"iov_len":11},{"iov_base":[30,83,84,112,34,84,113,7,25,54,104,16],"iov_len":12},{"iov_base":[116,27,76,74,121,8],"iov_len":6},{"iov_base":[32,106,96,22,70,17,70,10,65,4,86,78,89,25,66],"iov_len":15},{"iov_base":[72,126,124,123,48,125,30],"iov_len":7},{"iov_base":[112,90,122,97,94,72,13,34,28,22,57,49,101,88],"iov_len":14}],"iovcnt":14}
+---- calling fuzzer_types::calls::fs::Readv: {"fd":22,"iov":[{"iov_base":[0,0,0,0],"iov_len":4},{"iov_base":[0,0,0,0,0,0,0,0,0,0,0,0,0,0],"iov_len":14},{"iov_base":[0,0,0,0,0,0,0,0,0,0,0],"iov_len":11},{"iov_base":[0,0,0,0,0,0,0,0,0,0,0,0],"iov_len":12},{"iov_base":[0,0,0],"iov_len":3},{"iov_base":[0,0,0,0,0,0,0,0,0,0,0],"iov_len":11},{"iov_base":[0,0,0,0],"iov_len":4},{"iov_base":[0,0,0],"iov_len":3},{"iov_base":[0,0,0,0,0,0,0,0,0,0,0,0,0],"iov_len":13},{"iov_base":[0,0,0,0],"iov_len":4},{"iov_base":[0,0,0,0,0],"iov_len":5},{"iov_base":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"iov_len":15}],"iovcnt":12}
+---- result from fuzzer_types::calls::fs::Readv syscall: Err(9)
+---- after fuzzer_types::calls::fs::Readv: {"fd":22,"iov":[{"iov_base":[0,0,0,0],"iov_len":4},{"iov_base":[0,0,0,0,0,0,0,0,0,0,0,0,0,0],"iov_len":14},{"iov_base":[0,0,0,0,0,0,0,0,0,0,0],"iov_len":11},{"iov_base":[0,0,0,0,0,0,0,0,0,0,0,0],"iov_len":12},{"iov_base":[0,0,0],"iov_len":3},{"iov_base":[0,0,0,0,0,0,0,0,0,0,0],"iov_len":11},{"iov_base":[0,0,0,0],"iov_len":4},{"iov_base":[0,0,0],"iov_len":3},{"iov_base":[0,0,0,0,0,0,0,0,0,0,0,0,0],"iov_len":13},{"iov_base":[0,0,0,0],"iov_len":4},{"iov_base":[0,0,0,0,0],"iov_len":5},{"iov_base":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"iov_len":15}],"iovcnt":12}
+---- calling fuzzer_types::calls::fs::Access: {"pathname":[46,47,116,101,115,116,49,46,116,120,116],"mode":0}
+---- result from fuzzer_types::calls::fs::Access syscall: Ok(0)
+---- after fuzzer_types::calls::fs::Access: {"pathname":[46,47,116,101,115,116,49,46,116,120,116],"mode":0}
+---- calling fuzzer_types::calls::fs::Pipe: {"pipefd":[0,0]}
+---- result from fuzzer_types::calls::fs::Pipe syscall: Ok(0)
+---- after fuzzer_types::calls::fs::Pipe: {"pipefd":[23,24]}
+end
+---- calling fuzzer_types::calls::fs::Open: {"pathname":[46,47,116,101,115,116,49,46,116,120,116],"flags":2}
+---- result from fuzzer_types::calls::fs::Open syscall: Ok(3)
+---- after fuzzer_types::calls::fs::Open: {"pathname":[46,47,116,101,115,116,49,46,116,120,116],"flags":2}
+---- calling fuzzer_types::calls::fs::Close: {"fd":3}
+---- result from fuzzer_types::calls::fs::Close syscall: Ok(0)
+---- after fuzzer_types::calls::fs::Close: {"fd":3}
+---- calling fuzzer_types::calls::fs::Write: {"fd":3,"buf":[85,60,106,81,5,81,34,2,89,39,56,32,62,7],"count":14}
+---- result from fuzzer_types::calls::fs::Write syscall: Ok(14)
+---- after fuzzer_types::calls::fs::Write: {"fd":3,"buf":[85,60,106,81,5,81,34,2,89,39,56,32,62,7],"count":14}
+---- calling fuzzer_types::calls::fs::Read: {"fd":4,"buf":[0,0,0,0,0,0,0],"count":7}
+---- result from fuzzer_types::calls::fs::Read syscall: Ok(7)
+---- after fuzzer_types::calls::fs::Read: {"fd":4,"buf":[85,60,106,81,5,81,34],"count":7}
+---- calling fuzzer_types::calls::fs::Fstat: {"fd":5,"statbuf":{"st_dev":0,"st_ino":0,"st_nlink":0,"st_mode":0,"st_uid":0,"st_gid":0,"__pad0":0,"st_rdev":0,"st_size":0,"st_blksize":0,"st_blocks":0,"st_atime":0,"st_atime_nsec":0,"st_mtime":0,"st_mtime_nsec":0,"st_ctime":0,"st_ctime_nsec":0,"__unused":[0,0,0]}}
+---- result from fuzzer_types::calls::fs::Fstat syscall: Ok(0)
+---- after fuzzer_types::calls::fs::Fstat: {"fd":5,"statbuf":{"st_dev":66309,"st_ino":2228231,"st_nlink":1,"st_mode":33188,"st_uid":1000,"st_gid":1000,"__pad0":0,"st_rdev":0,"st_size":4614,"st_blksize":4096,"st_blocks":16,"st_atime":1627010280,"st_atime_nsec":139429898,"st_mtime":1627010303,"st_mtime_nsec":862762351,"st_ctime":1627010303,"st_ctime_nsec":862762351,"__unused":[0,0,0]}}
+---- calling fuzzer_types::calls::fs::Stat: {"pathname":[46,47,116,101,115,116,49,46,116,120,116],"statbuf":{"st_dev":0,"st_ino":0,"st_nlink":0,"st_mode":0,"st_uid":0,"st_gid":0,"__pad0":0,"st_rdev":0,"st_size":0,"st_blksize":0,"st_blocks":0,"st_atime":0,"st_atime_nsec":0,"st_mtime":0,"st_mtime_nsec":0,"st_ctime":0,"st_ctime_nsec":0,"__unused":[0,0,0]}}
+---- result from fuzzer_types::calls::fs::Stat syscall: Ok(0)
+---- after fuzzer_types::calls::fs::Stat: {"pathname":[46,47,116,101,115,116,49,46,116,120,116],"statbuf":{"st_dev":66309,"st_ino":2228231,"st_nlink":1,"st_mode":33188,"st_uid":1000,"st_gid":1000,"__pad0":0,"st_rdev":0,"st_size":4614,"st_blksize":4096,"st_blocks":16,"st_atime":1627010280,"st_atime_nsec":139429898,"st_mtime":1627010303,"st_mtime_nsec":862762351,"st_ctime":1627010303,"st_ctime_nsec":862762351,"__unused":[0,0,0]}}
+---- calling fuzzer_types::calls::fs::Lstat: {"pathname":[46,47,116,101,115,116,49,46,116,120,116],"statbuf":{"st_dev":0,"st_ino":0,"st_nlink":0,"st_mode":0,"st_uid":0,"st_gid":0,"__pad0":0,"st_rdev":0,"st_size":0,"st_blksize":0,"st_blocks":0,"st_atime":0,"st_atime_nsec":0,"st_mtime":0,"st_mtime_nsec":0,"st_ctime":0,"st_ctime_nsec":0,"__unused":[0,0,0]}}
+---- result from fuzzer_types::calls::fs::Lstat syscall: Ok(0)
+---- after fuzzer_types::calls::fs::Lstat: {"pathname":[46,47,116,101,115,116,49,46,116,120,116],"statbuf":{"st_dev":66309,"st_ino":2228231,"st_nlink":1,"st_mode":33188,"st_uid":1000,"st_gid":1000,"__pad0":0,"st_rdev":0,"st_size":4614,"st_blksize":4096,"st_blocks":16,"st_atime":1627010280,"st_atime_nsec":139429898,"st_mtime":1627010303,"st_mtime_nsec":862762351,"st_ctime":1627010303,"st_ctime_nsec":862762351,"__unused":[0,0,0]}}
+---- calling fuzzer_types::calls::fs::Poll: {"fds":[{"fd":6,"events":128,"revents":0},{"fd":7,"events":2,"revents":0},{"fd":8,"events":1,"revents":0},{"fd":9,"events":1,"revents":0},{"fd":10,"events":2,"revents":0},{"fd":11,"events":64,"revents":0},{"fd":12,"events":2,"revents":0},{"fd":13,"events":4,"revents":0},{"fd":14,"events":16,"revents":0},{"fd":15,"events":64,"revents":0},{"fd":16,"events":2,"revents":0},{"fd":17,"events":2,"revents":0},{"fd":18,"events":4,"revents":0},{"fd":19,"events":4,"revents":0},{"fd":20,"events":32,"revents":0}],"nfds":15,"timeout":2286}
+---- result from fuzzer_types::calls::fs::Poll syscall: Ok(7)
+---- after fuzzer_types::calls::fs::Poll: {"fds":[{"fd":6,"events":128,"revents":0},{"fd":7,"events":2,"revents":0},{"fd":8,"events":1,"revents":1},{"fd":9,"events":1,"revents":1},{"fd":10,"events":2,"revents":0},{"fd":11,"events":64,"revents":64},{"fd":12,"events":2,"revents":0},{"fd":13,"events":4,"revents":4},{"fd":14,"events":16,"revents":0},{"fd":15,"events":64,"revents":64},{"fd":16,"events":2,"revents":0},{"fd":17,"events":2,"revents":0},{"fd":18,"events":4,"revents":4},{"fd":19,"events":4,"revents":4},{"fd":20,"events":32,"revents":0}],"nfds":15,"timeout":2286}
+---- calling fuzzer_types::calls::fs::Lseek: {"fd":22,"offset":5,"whence":2}
+---- result from fuzzer_types::calls::fs::Lseek syscall: Ok(4619)
+---- after fuzzer_types::calls::fs::Lseek: {"fd":22,"offset":5,"whence":2}
+---- calling fuzzer_types::calls::fs::Pread64: {"fd":23,"buf":[0,0,0,0,0,0,0,0,0,0,0],"arg_count":11,"offset":8}
+---- result from fuzzer_types::calls::fs::Pread64 syscall: Err(9)
+---- after fuzzer_types::calls::fs::Pread64: {"fd":23,"buf":[0,0,0,0,0,0,0,0,0,0,0],"arg_count":11,"offset":8}
+---- calling fuzzer_types::calls::fs::Pwrite64: {"fd":24,"buf":[119,0],"arg_count":2,"offset":3}
+---- result from fuzzer_types::calls::fs::Pwrite64 syscall: Err(9)
+---- after fuzzer_types::calls::fs::Pwrite64: {"fd":24,"buf":[119,0],"arg_count":2,"offset":3}
+---- calling fuzzer_types::calls::fs::Writev: {"fd":25,"iov":[{"iov_base":[],"iov_len":0},{"iov_base":[110,44,84,50,27,81,20,34,49,57,1,65,100,36],"iov_len":14}],"iovcnt":2}
+---- result from fuzzer_types::calls::fs::Writev syscall: Ok(14)
+---- after fuzzer_types::calls::fs::Writev: {"fd":25,"iov":[{"iov_base":[],"iov_len":0},{"iov_base":[110,44,84,50,27,81,20,34,49,57,1,65,100,36],"iov_len":14}],"iovcnt":2}
+---- calling fuzzer_types::calls::fs::Readv: {"fd":26,"iov":[{"iov_base":[0,0,0,0,0,0,0,0,0,0,0,0,0],"iov_len":13},{"iov_base":[],"iov_len":0},{"iov_base":[0],"iov_len":1},{"iov_base":[0,0,0,0,0,0,0],"iov_len":7},{"iov_base":[0,0,0,0,0,0,0,0,0,0],"iov_len":10},{"iov_base":[0,0,0,0,0,0,0,0],"iov_len":8},{"iov_base":[0],"iov_len":1},{"iov_base":[0,0,0,0,0,0,0],"iov_len":7},{"iov_base":[0,0,0,0,0,0,0,0,0,0],"iov_len":10}],"iovcnt":9}
+---- result from fuzzer_types::calls::fs::Readv syscall: Ok(57)
+---- after fuzzer_types::calls::fs::Readv: {"fd":26,"iov":[{"iov_base":[0,0,0,0,0,0,0,0,0,0,0,0,0],"iov_len":13},{"iov_base":[],"iov_len":0},{"iov_base":[0],"iov_len":1},{"iov_base":[0,0,0,0,0,0,0],"iov_len":7},{"iov_base":[0,0,0,0,0,0,0,0,0,0],"iov_len":10},{"iov_base":[0,0,0,0,0,0,0,0],"iov_len":8},{"iov_base":[0],"iov_len":1},{"iov_base":[0,0,0,0,0,0,0],"iov_len":7},{"iov_base":[0,0,0,0,0,0,0,0,0,0],"iov_len":10}],"iovcnt":9}
+---- calling fuzzer_types::calls::fs::Access: {"pathname":[46,47,116,101,115,116,49,46,116,120,116],"mode":1}
+---- result from fuzzer_types::calls::fs::Access syscall: Err(13)
+---- after fuzzer_types::calls::fs::Access: {"pathname":[46,47,116,101,115,116,49,46,116,120,116],"mode":1}
+---- calling fuzzer_types::calls::fs::Pipe: {"pipefd":[0,0]}
+---- result from fuzzer_types::calls::fs::Pipe syscall: Ok(0)
+---- after fuzzer_types::calls::fs::Pipe: {"pipefd":[27,28]}
+end
+---- calling fuzzer_types::calls::time::Nanosleep: {"req":{"tv_sec":3,"tv_nsec":347391495},"rem":{"tv_sec":3,"tv_nsec":979790580}}
+---- result from fuzzer_types::calls::time::Nanosleep syscall: Ok(0)
+---- after fuzzer_types::calls::time::Nanosleep: {"req":{"tv_sec":3,"tv_nsec":347391495},"rem":{"tv_sec":3,"tv_nsec":979790580}}
+---- calling fuzzer_types::calls::time::Nanosleep: {"req":{"tv_sec":3,"tv_nsec":695555290},"rem":{"tv_sec":3,"tv_nsec":376807146}}
+---- result from fuzzer_types::calls::time::Nanosleep syscall: Ok(0)
+---- after fuzzer_types::calls::time::Nanosleep: {"req":{"tv_sec":3,"tv_nsec":695555290},"rem":{"tv_sec":3,"tv_nsec":376807146}}
+---- calling fuzzer_types::calls::time::Nanosleep: {"req":{"tv_sec":3,"tv_nsec":121024078},"rem":{"tv_sec":3,"tv_nsec":31156440}}
+---- result from fuzzer_types::calls::time::Nanosleep syscall: Ok(0)
+---- after fuzzer_types::calls::time::Nanosleep: {"req":{"tv_sec":3,"tv_nsec":121024078},"rem":{"tv_sec":3,"tv_nsec":31156440}}
+---- calling fuzzer_types::calls::synchro::Rt_sigprocmask: {"how":1,"set":{"__val":[11216300515982321403,12232840940895536346,4063125485875625272,10702502264680223168,8230188376521242910,13930635232041100510,12722856120012780447,158702817653068225,12900572109760542303,7088483618537552457,9530562601602784891,4951129177977702447,4213917996241357385,18170983911507009335,5598562474702027685,12724191042435081687]},"oldset":{"__val":[6084608935058109156,12156442707982765819,17113459519829046467,11427600827554366677,17031011812914744713,6477651912565530109,15344996946475947703,2910278057801683369,7415622957393166419,1793786088619464392,11041233138004881344,347693529055222863,4011828831608813745,14848603304723847442,6053344874926559046,11251301016112865229]},"sigsetsize":8}
+---- result from fuzzer_types::calls::synchro::Rt_sigprocmask syscall: Ok(0)
+---- after fuzzer_types::calls::synchro::Rt_sigprocmask: {"how":1,"set":{"__val":[11216300515982321403,12232840940895536346,4063125485875625272,10702502264680223168,8230188376521242910,13930635232041100510,12722856120012780447,158702817653068225,12900572109760542303,7088483618537552457,9530562601602784891,4951129177977702447,4213917996241357385,18170983911507009335,5598562474702027685,12724191042435081687]},"oldset":{"__val":[0,12156442707982765819,17113459519829046467,11427600827554366677,17031011812914744713,6477651912565530109,15344996946475947703,2910278057801683369,7415622957393166419,1793786088619464392,11041233138004881344,347693529055222863,4011828831608813745,14848603304723847442,6053344874926559046,11251301016112865229]},"sigsetsize":8}
+---- calling fuzzer_types::calls::synchro::Rt_sigprocmask: {"how":2,"set":{"__val":[2451501831034405512,1301743810825686028,9105538963575433710,2028620251069925624,2099646793136500713,10304901151139196876,16299462283759268131,5529642328458927278,6241779075824620563,391572187276387020,7212232005358169055,4912103491148539484,17457196273634540329,2795578467362788020,14252395426666989001,8560076382217171888]},"oldset":{"__val":[611513730713971336,738134202502188421,10465312972024803912,15083185079348825549,3656968665730025765,10018867758524247168,1876570885533103151,13768384972101321815,15721563326716135337,3220673212398137355,7943790978106355799,7260156010734220616,12641193217369032654,15115889134118539377,2380351010826248204,217179724128479830]},"sigsetsize":8}
+---- result from fuzzer_types::calls::synchro::Rt_sigprocmask syscall: Ok(0)
+---- after fuzzer_types::calls::synchro::Rt_sigprocmask: {"how":2,"set":{"__val":[2451501831034405512,1301743810825686028,9105538963575433710,2028620251069925624,2099646793136500713,10304901151139196876,16299462283759268131,5529642328458927278,6241779075824620563,391572187276387020,7212232005358169055,4912103491148539484,17457196273634540329,2795578467362788020,14252395426666989001,8560076382217171888]},"oldset":{"__val":[0,738134202502188421,10465312972024803912,15083185079348825549,3656968665730025765,10018867758524247168,1876570885533103151,13768384972101321815,15721563326716135337,3220673212398137355,7943790978106355799,7260156010734220616,12641193217369032654,15115889134118539377,2380351010826248204,217179724128479830]},"sigsetsize":8}
+---- calling fuzzer_types::calls::synchro::Rt_sigprocmask: {"how":1,"set":{"__val":[9134879459711883525,6420525943544720246,8369501317549577621,10393935538349153955,14524291208934461220,3131852477874118376,14447589412132791910,1291586109336427863,13775574535776120311,8247433775121872035,8706725969405166774,8077272907500912224,11980614686311250673,9524745059793174343,9040064130757792778,8052203754167000018]},"oldset":{"__val":[9529493790920151852,8529609877564428082,17796833829595501994,17409260503203910151,16062541661576874555,2803622568802753841,13441040171918686044,9888051831788355322,13198509446271815212,17239912700237450694,4072437788550432464,2526585114220417139,10449670549769038605,10200717228727111264,4344071019047173743,9170212015127729818]},"sigsetsize":8}
+---- result from fuzzer_types::calls::synchro::Rt_sigprocmask syscall: Ok(0)
+---- after fuzzer_types::calls::synchro::Rt_sigprocmask: {"how":1,"set":{"__val":[9134879459711883525,6420525943544720246,8369501317549577621,10393935538349153955,14524291208934461220,3131852477874118376,14447589412132791910,1291586109336427863,13775574535776120311,8247433775121872035,8706725969405166774,8077272907500912224,11980614686311250673,9524745059793174343,9040064130757792778,8052203754167000018]},"oldset":{"__val":[2451501831034143368,8529609877564428082,17796833829595501994,17409260503203910151,16062541661576874555,2803622568802753841,13441040171918686044,9888051831788355322,13198509446271815212,17239912700237450694,4072437788550432464,2526585114220417139,10449670549769038605,10200717228727111264,4344071019047173743,9170212015127729818]},"sigsetsize":8}
+---- calling fuzzer_types::calls::synchro::Sched_yield: null
+---- result from fuzzer_types::calls::synchro::Sched_yield syscall: Ok(0)
+---- after fuzzer_types::calls::synchro::Sched_yield: null
+---- calling fuzzer_types::calls::aux::Gettid: null
+---- result from fuzzer_types::calls::aux::Gettid syscall: Ok(256215)
+---- after fuzzer_types::calls::aux::Gettid: null
+---- calling fuzzer_types::calls::aux::Getuid: null
+---- result from fuzzer_types::calls::aux::Getuid syscall: Ok(1000)
+---- after fuzzer_types::calls::aux::Getuid: null
+---- calling fuzzer_types::calls::aux::Geteuid: null
+---- result from fuzzer_types::calls::aux::Geteuid syscall: Ok(1000)
+---- after fuzzer_types::calls::aux::Geteuid: null
+---- calling fuzzer_types::calls::aux::Getpid: null
+---- result from fuzzer_types::calls::aux::Getpid syscall: Ok(255922)
+---- after fuzzer_types::calls::aux::Getpid: null
+---- calling fuzzer_types::calls::aux::Getppid: null
+---- result from fuzzer_types::calls::aux::Getppid syscall: Ok(221786)
+---- after fuzzer_types::calls::aux::Getppid: null
+---- calling fuzzer_types::calls::synchro::Sched_yield: null
+---- result from fuzzer_types::calls::synchro::Sched_yield syscall: Ok(0)
+---- after fuzzer_types::calls::synchro::Sched_yield: null
+---- calling fuzzer_types::calls::aux::Gettid: null
+---- result from fuzzer_types::calls::aux::Gettid syscall: Ok(256216)
+---- after fuzzer_types::calls::aux::Gettid: null
+---- calling fuzzer_types::calls::aux::Getuid: null
+---- result from fuzzer_types::calls::aux::Getuid syscall: Ok(1000)
+---- after fuzzer_types::calls::aux::Getuid: null
+---- calling fuzzer_types::calls::aux::Geteuid: null
+---- result from fuzzer_types::calls::aux::Geteuid syscall: Ok(1000)
+---- after fuzzer_types::calls::aux::Geteuid: null
+---- calling fuzzer_types::calls::aux::Getpid: null
+---- result from fuzzer_types::calls::aux::Getpid syscall: Ok(255922)
+---- after fuzzer_types::calls::aux::Getpid: null
+---- calling fuzzer_types::calls::aux::Getppid: null
+---- result from fuzzer_types::calls::aux::Getppid syscall: Ok(221786)
+---- after fuzzer_types::calls::aux::Getppid: null
+---- calling fuzzer_types::calls::synchro::Sched_yield: null
+---- result from fuzzer_types::calls::synchro::Sched_yield syscall: Ok(0)
+---- after fuzzer_types::calls::synchro::Sched_yield: null
+---- calling fuzzer_types::calls::aux::Gettid: null
+---- result from fuzzer_types::calls::aux::Gettid syscall: Ok(256217)
+---- after fuzzer_types::calls::aux::Gettid: null
+---- calling fuzzer_types::calls::aux::Getuid: null
+---- result from fuzzer_types::calls::aux::Getuid syscall: Ok(1000)
+---- after fuzzer_types::calls::aux::Getuid: null
+---- calling fuzzer_types::calls::aux::Geteuid: null
+---- result from fuzzer_types::calls::aux::Geteuid syscall: Ok(1000)
+---- after fuzzer_types::calls::aux::Geteuid: null
+---- calling fuzzer_types::calls::aux::Getpid: null
+---- result from fuzzer_types::calls::aux::Getpid syscall: Ok(255922)
+---- after fuzzer_types::calls::aux::Getpid: null
+---- calling fuzzer_types::calls::aux::Getppid: null
+---- result from fuzzer_types::calls::aux::Getppid syscall: Ok(221786)
+---- after fuzzer_types::calls::aux::Getppid: null
+---- calling fuzzer_types::calls::net::Socket: {"domain":19,"sock_type":2,"protocol":0}
+---- result from fuzzer_types::calls::net::Socket syscall: Err(97)
+---- after fuzzer_types::calls::net::Socket: {"domain":19,"sock_type":2,"protocol":0}
+---- calling fuzzer_types::calls::net::Connect: {"sockfd":3,"addr":[87,24,96,89,121,28,12,6,0,77,96,53,122,80],"addrlen":14}
+---- result from fuzzer_types::calls::net::Connect syscall: Err(22)
+---- after fuzzer_types::calls::net::Connect: {"sockfd":3,"addr":[87,24,96,89,121,28,12,6,0,77,96,53,122,80],"addrlen":14}
+---- calling fuzzer_types::calls::net::Send: {"sockfd":4,"buf":[14,29,8,125,27,124,65,112,94,100,63,4,35,24],"len":14,"flags":1610707432}
+---- result from fuzzer_types::calls::net::Send syscall: Err(107)
+---- after fuzzer_types::calls::net::Send: {"sockfd":4,"buf":[14,29,8,125,27,124,65,112,94,100,63,4,35,24],"len":14,"flags":1610707432}
+---- calling fuzzer_types::calls::net::SendTo: {"sockfd":5,"buf":[],"len":0,"flags":536983529,"dest_addr":[66,106,121,122,73,55,83,69,48,20,59,111],"addrlen":12}
+---- result from fuzzer_types::calls::net::SendTo syscall: Err(107)
+---- after fuzzer_types::calls::net::SendTo: {"sockfd":5,"buf":[],"len":0,"flags":536983529,"dest_addr":[66,106,121,122,73,55,83,69,48,20,59,111],"addrlen":12}
+---- calling fuzzer_types::calls::net::RecvFrom: {"sockfd":6,"buf":[0,0,0],"len":3,"flags":536968589,"src_addr":[18,98,36,124,110,53,74,72,114,106,86,126,15],"addrlen":13}
+---- result from fuzzer_types::calls::net::RecvFrom syscall: Err(107)
+---- after fuzzer_types::calls::net::RecvFrom: {"sockfd":6,"buf":[0,0,0],"len":3,"flags":536968589,"src_addr":[18,98,36,124,110,53,74,72,114,106,86,126,15],"addrlen":13}
+---- calling fuzzer_types::calls::net::Getsockopt: {"socket":7,"level":265,"optname":22,"optval":[0,0,0,0,0,0,0,0,0,0,0,0],"optlen":12}
+---- result from fuzzer_types::calls::net::Getsockopt syscall: Err(22)
+---- after fuzzer_types::calls::net::Getsockopt: {"socket":7,"level":265,"optname":22,"optval":[0,0,0,0,0,0,0,0,0,0,0,0],"optlen":12}
+---- calling fuzzer_types::calls::net::Setsockopt: {"socket":8,"level":279,"optname":43,"optval":[64,6,4,11,77,22,108,7,102,115,30,108,22,103],"optlen":14}
+---- result from fuzzer_types::calls::net::Setsockopt syscall: Err(22)
+---- after fuzzer_types::calls::net::Setsockopt: {"socket":8,"level":279,"optname":43,"optval":[64,6,4,11,77,22,108,7,102,115,30,108,22,103],"optlen":14}
+---- calling fuzzer_types::calls::net::Socket: {"domain":13,"sock_type":524288,"protocol":0}
+---- result from fuzzer_types::calls::net::Socket syscall: Err(97)
+---- after fuzzer_types::calls::net::Socket: {"domain":13,"sock_type":524288,"protocol":0}
+---- calling fuzzer_types::calls::net::Connect: {"sockfd":3,"addr":[35,52,26,43,42,124,78,67],"addrlen":8}
+---- result from fuzzer_types::calls::net::Connect syscall: Err(22)
+---- after fuzzer_types::calls::net::Connect: {"sockfd":3,"addr":[35,52,26,43,42,124,78,67],"addrlen":8}
+---- calling fuzzer_types::calls::net::Send: {"sockfd":4,"buf":[108,19,35,65,114,42,97,73],"len":8,"flags":1610709729}
+---- result from fuzzer_types::calls::net::Send syscall: Err(107)
+---- after fuzzer_types::calls::net::Send: {"sockfd":4,"buf":[108,19,35,65,114,42,97,73],"len":8,"flags":1610709729}
+---- calling fuzzer_types::calls::net::SendTo: {"sockfd":5,"buf":[92],"len":1,"flags":1610664650,"dest_addr":[74,33,98,110,22,15,31,36,48,106,24,23,45],"addrlen":13}
+---- result from fuzzer_types::calls::net::SendTo syscall: Err(107)
+---- after fuzzer_types::calls::net::SendTo: {"sockfd":5,"buf":[92],"len":1,"flags":1610664650,"dest_addr":[74,33,98,110,22,15,31,36,48,106,24,23,45],"addrlen":13}
+---- calling fuzzer_types::calls::net::RecvFrom: {"sockfd":6,"buf":[0,0,0,0,0,0,0,0,0],"len":9,"flags":536985413,"src_addr":[11,61,63,24,6,89,60,66,121,55,121,64],"addrlen":12}
+---- result from fuzzer_types::calls::net::RecvFrom syscall: Err(107)
+---- after fuzzer_types::calls::net::RecvFrom: {"sockfd":6,"buf":[0,0,0,0,0,0,0,0,0],"len":9,"flags":536985413,"src_addr":[11,61,63,24,6,89,60,66,121,55,121,64],"addrlen":12}
+---- calling fuzzer_types::calls::net::Getsockopt: {"socket":7,"level":270,"optname":6,"optval":[0,0,0,0,0,0,0,0,0,0,0,0,0],"optlen":13}
+---- result from fuzzer_types::calls::net::Getsockopt syscall: Err(95)
+---- after fuzzer_types::calls::net::Getsockopt: {"socket":7,"level":270,"optname":6,"optval":[0,0,0,0,0,0,0,0,0,0,0,0,0],"optlen":13}
+---- calling fuzzer_types::calls::net::Setsockopt: {"socket":8,"level":255,"optname":43,"optval":[23,96,32,69,70,84,44,124,96],"optlen":9}
+---- result from fuzzer_types::calls::net::Setsockopt syscall: Err(95)
+---- after fuzzer_types::calls::net::Setsockopt: {"socket":8,"level":255,"optname":43,"optval":[23,96,32,69,70,84,44,124,96],"optlen":9}
+---- calling fuzzer_types::calls::net::Socket: {"domain":9,"sock_type":3,"protocol":0}
+---- result from fuzzer_types::calls::net::Socket syscall: Err(97)
+---- after fuzzer_types::calls::net::Socket: {"domain":9,"sock_type":3,"protocol":0}
+---- calling fuzzer_types::calls::net::Connect: {"sockfd":3,"addr":[31,92,61,74,51,31,101,99],"addrlen":8}
+---- result from fuzzer_types::calls::net::Connect syscall: Err(22)
+---- after fuzzer_types::calls::net::Connect: {"sockfd":3,"addr":[31,92,61,74,51,31,101,99],"addrlen":8}
+---- calling fuzzer_types::calls::net::Send: {"sockfd":4,"buf":[42,112,89,108,8,0,107,34,33,13],"len":10,"flags":1073766307}
+---- result from fuzzer_types::calls::net::Send syscall: Err(95)
+---- after fuzzer_types::calls::net::Send: {"sockfd":4,"buf":[42,112,89,108,8,0,107,34,33,13],"len":10,"flags":1073766307}
+---- calling fuzzer_types::calls::net::SendTo: {"sockfd":5,"buf":[39,27,22,10,123,95],"len":6,"flags":112490,"dest_addr":[24,4,80,92],"addrlen":4}
+---- result from fuzzer_types::calls::net::SendTo syscall: Err(22)
+---- after fuzzer_types::calls::net::SendTo: {"sockfd":5,"buf":[39,27,22,10,123,95],"len":6,"flags":112490,"dest_addr":[24,4,80,92],"addrlen":4}
+---- calling fuzzer_types::calls::net::RecvFrom: {"sockfd":6,"buf":[0,0,0,0,0,0,0,0,0,0],"len":10,"flags":1610670023,"src_addr":[80,13,108,66,35,110,58],"addrlen":7}
+---- result from fuzzer_types::calls::net::RecvFrom syscall: Err(107)
+---- after fuzzer_types::calls::net::RecvFrom: {"sockfd":6,"buf":[0,0,0,0,0,0,0,0,0,0],"len":10,"flags":1610670023,"src_addr":[80,13,108,66,35,110,58],"addrlen":7}
+---- calling fuzzer_types::calls::net::Getsockopt: {"socket":7,"level":266,"optname":12,"optval":[0,0,0,0,0,0,0,0,0,0,0],"optlen":11}
+---- result from fuzzer_types::calls::net::Getsockopt syscall: Err(92)
+---- after fuzzer_types::calls::net::Getsockopt: {"socket":7,"level":266,"optname":12,"optval":[0,0,0,0,0,0,0,0,0,0,0],"optlen":11}
+---- calling fuzzer_types::calls::net::Setsockopt: {"socket":8,"level":279,"optname":30,"optval":[67,102,83],"optlen":3}
+---- result from fuzzer_types::calls::net::Setsockopt syscall: Err(92)
+---- after fuzzer_types::calls::net::Setsockopt: {"socket":8,"level":279,"optname":30,"optval":[67,102,83],"optlen":3}

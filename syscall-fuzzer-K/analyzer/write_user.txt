@@ -1,0 +1,9 @@
+INFO: Fuzzer will always obey the calling conventions and consider the semantics
+INFO: Currently configuration file has not been supported
+INFO: `seed` is set to 11037
+INFO: `sleep` is set to 4
+INFO: `number` is set to 1
+INFO: Testing single syscall: 1
+---- calling fuzzer_types::calls::fs::Write: {"fd":3,"buf":[23,67,12,113,62,69,67,37,7,63],"count":10}
+---- result from fuzzer_types::calls::fs::Write syscall: Ok(10)
+---- after fuzzer_types::calls::fs::Write: {"fd":3,"buf":[23,67,12,113,62,69,67,37,7,63],"count":10}

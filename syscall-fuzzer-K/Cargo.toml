@@ -1,0 +1,22 @@
+[package]
+name = "syscall-hook-rust"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "logger"
+crate-type = ["staticlib"]
+
+[dependencies]
+libc = {path = "./libc"}
+serde-json-core = "0.4.0"
+serde = { version = "1.0", default-features = false, features = ["derive"] }
+heapless = "0.7.3"
+
+[dependencies.linux-std]
+path = "std"
+
+[workspace]
+members = [ ".", "std" ]

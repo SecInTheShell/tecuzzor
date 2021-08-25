@@ -1,0 +1,19 @@
+[package]
+name = "fuzzer_types"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+default = []
+type_only = []
+
+[dependencies]
+rand = "0.8.0"
+syscalls = "0.3.2"
+signal-hook = "0.3.9"
+# page_size = "0.4.2"
+libc = { path = "../libc" }
+fuzzer_macro = { path = "../fuzzer_macro" }
+serde = { version = "1.0", features = ["derive", "rc"] }

@@ -1,0 +1,315 @@
+fuzzer_types::calls::mem::Mmap: Mmap { addr: Address(0), length: Size(59072), prot: Protection(0), flags: MapFlag(524288), fd: Fd(3), offset: AlignedOffset(0) }
+---- result from fuzzer_types::calls::mem::Mmap syscall: Err(22)
+---- after lstat: Mmap { addr: Address(0), length: Size(59072), prot: Protection(0), flags: MapFlag(524288), fd: Fd(3), offset: AlignedOffset(0) }
+fuzzer_types::calls::mem::Munmap: Munmap { addr: AllocatedMemory(Mmap { addr: Address(140649368752128), length: Size(25310), prot: Protection(0), flags: MapFlag(1), fd: Fd(3), offset: AlignedOffset(0) }), length: BufferLength(25310) }
+---- result from fuzzer_types::calls::mem::Munmap syscall: Ok(0)
+---- after lstat: Munmap { addr: AllocatedMemory(Mmap { addr: Address(140649368752128), length: Size(25310), prot: Protection(0), flags: MapFlag(1), fd: Fd(3), offset: AlignedOffset(0) }), length: BufferLength(25310) }
+fuzzer_types::calls::mem::Mprotect: Mprotect { addr: Mmap { addr: Address(140649368764416), length: Size(14924), prot: Protection(0), flags: MapFlag(1), fd: Fd(4), offset: AlignedOffset(6845494196524769280) }, len: Size(13393), prot: Protection(50331651) }
+---- result from fuzzer_types::calls::mem::Mprotect syscall: Err(22)
+---- after lstat: Mprotect { addr: Mmap { addr: Address(140649368764416), length: Size(14924), prot: Protection(0), flags: MapFlag(1), fd: Fd(4), offset: AlignedOffset(6845494196524769280) }, len: Size(13393), prot: Protection(50331651) }
+fuzzer_types::calls::mem::Mremap: Mremap { old_address: Mmap { addr: Address(15654833830640031786), length: Size(36890), prot: Protection(0), flags: MapFlag(8192), fd: Fd(3), offset: AlignedOffset(0) }, old_size: Size(12463), new_size: Size(11848), flags: MremapFlag(3) }
+---- result from fuzzer_types::calls::mem::Mremap syscall: Err(22)
+---- after lstat: Mremap { old_address: Mmap { addr: Address(15654833830640031786), length: Size(36890), prot: Protection(0), flags: MapFlag(8192), fd: Fd(3), offset: AlignedOffset(0) }, old_size: Size(12463), new_size: Size(11848), flags: MremapFlag(3) }
+fuzzer_types::calls::mem::Brk: Brk { addr: Address(18368356211157270437) }
+---- result from fuzzer_types::calls::mem::Brk syscall: Ok(94639189909504)
+---- after lstat: Brk { addr: Address(18368356211157270437) }
+fuzzer_types::calls::mem::Mmap: Mmap { addr: Address(3494627970123479240), length: Size(54196), prot: Protection(0), flags: MapFlag(4096), fd: Fd(3), offset: AlignedOffset(0) }
+---- result from fuzzer_types::calls::mem::Mmap syscall: Err(22)
+---- after lstat: Mmap { addr: Address(3494627970123479240), length: Size(54196), prot: Protection(0), flags: MapFlag(4096), fd: Fd(3), offset: AlignedOffset(0) }
+fuzzer_types::calls::mem::Munmap: Munmap { addr: AllocatedMemory(Mmap { addr: Address(140649368748032), length: Size(32670), prot: Protection(0), flags: MapFlag(1), fd: Fd(3), offset: AlignedOffset(0) }), length: BufferLength(32670) }
+---- result from fuzzer_types::calls::mem::Munmap syscall: Ok(0)
+---- after lstat: Munmap { addr: AllocatedMemory(Mmap { addr: Address(140649368748032), length: Size(32670), prot: Protection(0), flags: MapFlag(1), fd: Fd(3), offset: AlignedOffset(0) }), length: BufferLength(32670) }
+fuzzer_types::calls::mem::Mprotect: Mprotect { addr: Mmap { addr: Address(140649368764416), length: Size(14946), prot: Protection(0), flags: MapFlag(3), fd: Fd(3), offset: AlignedOffset(0) }, len: Size(5171), prot: Protection(0) }
+---- result from fuzzer_types::calls::mem::Mprotect syscall: Ok(0)
+---- after lstat: Mprotect { addr: Mmap { addr: Address(140649368764416), length: Size(14946), prot: Protection(0), flags: MapFlag(3), fd: Fd(3), offset: AlignedOffset(0) }, len: Size(5171), prot: Protection(0) }
+fuzzer_types::calls::mem::Mremap: Mremap { old_address: Mmap { addr: Address(0), length: Size(37138), prot: Protection(50331649), flags: MapFlag(2013265920), fd: Fd(3), offset: AlignedOffset(0) }, old_size: Size(40250), new_size: Size(40391), flags: MremapFlag(3) }
+---- result from fuzzer_types::calls::mem::Mremap syscall: Err(22)
+---- after lstat: Mremap { old_address: Mmap { addr: Address(0), length: Size(37138), prot: Protection(50331649), flags: MapFlag(2013265920), fd: Fd(3), offset: AlignedOffset(0) }, old_size: Size(40250), new_size: Size(40391), flags: MremapFlag(3) }
+fuzzer_types::calls::mem::Brk: Brk { addr: Address(0) }
+---- result from fuzzer_types::calls::mem::Brk syscall: Ok(94639189909504)
+---- after lstat: Brk { addr: Address(0) }
+fuzzer_types::calls::mem::Mmap: Mmap { addr: Address(4217211677319881607), length: Size(64046), prot: Protection(50331648), flags: MapFlag(2), fd: Fd(3), offset: AlignedOffset(0) }
+---- result from fuzzer_types::calls::mem::Mmap syscall: Ok(140649368715264)
+---- after lstat: Mmap { addr: Address(4217211677319881607), length: Size(64046), prot: Protection(50331648), flags: MapFlag(2), fd: Fd(3), offset: AlignedOffset(0) }
+fuzzer_types::calls::mem::Munmap: Munmap { addr: AllocatedMemory(Mmap { addr: Address(140649368764416), length: Size(12458), prot: Protection(50331651), flags: MapFlag(1), fd: Fd(3), offset: AlignedOffset(0) }), length: BufferLength(12458) }
+---- result from fuzzer_types::calls::mem::Munmap syscall: Ok(0)
+---- after lstat: Munmap { addr: AllocatedMemory(Mmap { addr: Address(140649368764416), length: Size(12458), prot: Protection(50331651), flags: MapFlag(1), fd: Fd(3), offset: AlignedOffset(0) }), length: BufferLength(12458) }
+fuzzer_types::calls::mem::Mprotect: Mprotect { addr: Mmap { addr: Address(140649368756224), length: Size(23433), prot: Protection(0), flags: MapFlag(3), fd: Fd(4), offset: AlignedOffset(2555599694063673344) }, len: Size(4189), prot: Protection(0) }
+---- result from fuzzer_types::calls::mem::Mprotect syscall: Ok(0)
+---- after lstat: Mprotect { addr: Mmap { addr: Address(140649368756224), length: Size(23433), prot: Protection(0), flags: MapFlag(3), fd: Fd(4), offset: AlignedOffset(2555599694063673344) }, len: Size(4189), prot: Protection(0) }
+fuzzer_types::calls::mem::Mremap: Mremap { old_address: Mmap { addr: Address(13589617706191638692), length: Size(58059), prot: Protection(0), flags: MapFlag(524288), fd: Fd(3), offset: AlignedOffset(2232508519154089984) }, old_size: Size(10495), new_size: Size(9277), flags: MremapFlag(1) }
+---- result from fuzzer_types::calls::mem::Mremap syscall: Err(22)
+---- after lstat: Mremap { old_address: Mmap { addr: Address(13589617706191638692), length: Size(58059), prot: Protection(0), flags: MapFlag(524288), fd: Fd(3), offset: AlignedOffset(2232508519154089984) }, old_size: Size(10495), new_size: Size(9277), flags: MremapFlag(1) }
+fuzzer_types::calls::mem::Brk: Brk { addr: Address(0) }
+---- result from fuzzer_types::calls::mem::Brk syscall: Ok(94639189909504)
+---- after lstat: Brk { addr: Address(0) }
+fuzzer_types::calls::fs::Open: Open { pathname: "./test1.txt", flags: OpenFlag(2) }
+---- result from fuzzer_types::calls::fs::Open syscall: Ok(3)
+---- after open: Open { pathname: "./test1.txt", flags: OpenFlag(2) }
+fuzzer_types::calls::fs::Close: Close { fd: Fd(3) }
+---- result from fuzzer_types::calls::fs::Close syscall: Ok(0)
+---- after close: Close { fd: Fd(3) }
+fuzzer_types::calls::fs::Write: Write { fd: Fd(3), buf: ArgBuffer([11, 19, 124, 11, 7, 110, 36, 72, 60, 118, 46, 5]), count: BufferLength(12) }
+---- result from fuzzer_types::calls::fs::Write syscall: Ok(12)
+---- after write: Write { fd: Fd(3), buf: ArgBuffer([11, 19, 124, 11, 7, 110, 36, 72, 60, 118, 46, 5]), count: BufferLength(12) }
+fuzzer_types::calls::fs::Read: Read { fd: Fd(4), buf: RetBuffer([0, 0, 0, 0, 0]), count: BufferLength(5) }
+---- result from fuzzer_types::calls::fs::Read syscall: Err(9)
+---- after read: Read { fd: Fd(4), buf: RetBuffer([0, 0, 0, 0, 0]), count: BufferLength(5) }
+fuzzer_types::calls::fs::Fstat: Fstat { fd: Fd(5), statbuf: stat { st_dev: 0, st_ino: 0, st_nlink: 0, st_mode: 0, st_uid: 0, st_gid: 0, __pad0: 0, st_rdev: 0, st_size: 0, st_blksize: 0, st_blocks: 0, st_atime: 0, st_atime_nsec: 0, st_mtime: 0, st_mtime_nsec: 0, st_ctime: 0, st_ctime_nsec: 0, __unused: [0, 0, 0] } }
+---- result from fuzzer_types::calls::fs::Fstat syscall: Ok(0)
+---- after fstat: Fstat { fd: Fd(5), statbuf: stat { st_dev: 66309, st_ino: 2228231, st_nlink: 1, st_mode: 33188, st_uid: 1000, st_gid: 1000, __pad0: 0, st_rdev: 0, st_size: 4614, st_blksize: 4096, st_blocks: 16, st_atime: 1625975685, st_atime_nsec: 421805066, st_mtime: 1626924783, st_mtime_nsec: 718495742, st_ctime: 1626924783, st_ctime_nsec: 718495742, __unused: [0, 0, 0] } }
+fuzzer_types::calls::fs::Stat: Stat { pathname: "./test1.txt", statbuf: stat { st_dev: 0, st_ino: 0, st_nlink: 0, st_mode: 0, st_uid: 0, st_gid: 0, __pad0: 0, st_rdev: 0, st_size: 0, st_blksize: 0, st_blocks: 0, st_atime: 0, st_atime_nsec: 0, st_mtime: 0, st_mtime_nsec: 0, st_ctime: 0, st_ctime_nsec: 0, __unused: [0, 0, 0] } }
+---- result from fuzzer_types::calls::fs::Stat syscall: Ok(0)
+---- after stat: Stat { pathname: "./test1.txt", statbuf: stat { st_dev: 66309, st_ino: 2228231, st_nlink: 1, st_mode: 33188, st_uid: 1000, st_gid: 1000, __pad0: 0, st_rdev: 0, st_size: 4614, st_blksize: 4096, st_blocks: 16, st_atime: 1625975685, st_atime_nsec: 421805066, st_mtime: 1626924783, st_mtime_nsec: 718495742, st_ctime: 1626924783, st_ctime_nsec: 718495742, __unused: [0, 0, 0] } }
+fuzzer_types::calls::fs::Lstat: Lstat { pathname: "./test1.txt", statbuf: stat { st_dev: 0, st_ino: 0, st_nlink: 0, st_mode: 0, st_uid: 0, st_gid: 0, __pad0: 0, st_rdev: 0, st_size: 0, st_blksize: 0, st_blocks: 0, st_atime: 0, st_atime_nsec: 0, st_mtime: 0, st_mtime_nsec: 0, st_ctime: 0, st_ctime_nsec: 0, __unused: [0, 0, 0] } }
+---- result from fuzzer_types::calls::fs::Lstat syscall: Ok(0)
+---- after lstat: Lstat { pathname: "./test1.txt", statbuf: stat { st_dev: 66309, st_ino: 2228231, st_nlink: 1, st_mode: 33188, st_uid: 1000, st_gid: 1000, __pad0: 0, st_rdev: 0, st_size: 4614, st_blksize: 4096, st_blocks: 16, st_atime: 1625975685, st_atime_nsec: 421805066, st_mtime: 1626924783, st_mtime_nsec: 718495742, st_ctime: 1626924783, st_ctime_nsec: 718495742, __unused: [0, 0, 0] } }
+fuzzer_types::calls::fs::Poll: Poll { fds: ArgBuffer([PollFd { fd: Fd(6), events: PollEvent(128), revents: PollEvent(0) }, PollFd { fd: Fd(7), events: PollEvent(256), revents: PollEvent(0) }, PollFd { fd: Fd(8), events: PollEvent(32), revents: PollEvent(0) }, PollFd { fd: Fd(9), events: PollEvent(16), revents: PollEvent(0) }]), nfds: BufferLength(4), timeout: TimeMilliSec(2077) }
+---- result from fuzzer_types::calls::fs::Poll syscall: Ok(1)
+---- after poll: Poll { fds: ArgBuffer([PollFd { fd: Fd(6), events: PollEvent(128), revents: PollEvent(0) }, PollFd { fd: Fd(7), events: PollEvent(256), revents: PollEvent(256) }, PollFd { fd: Fd(8), events: PollEvent(32), revents: PollEvent(0) }, PollFd { fd: Fd(9), events: PollEvent(16), revents: PollEvent(0) }]), nfds: BufferLength(4), timeout: TimeMilliSec(2077) }
+fuzzer_types::calls::fs::Lseek: Lseek { fd: Fd(10), offset: Offset(8), whence: SeekTask(2) }
+---- result from fuzzer_types::calls::fs::Lseek syscall: Ok(4622)
+---- after lseek: Lseek { fd: Fd(10), offset: Offset(8), whence: SeekTask(2) }
+fuzzer_types::calls::fs::Pread64: Pread64 { fd: Fd(11), buf: RetBuffer([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), arg_count: BufferLength(12), offset: Offset(15) }
+---- result from fuzzer_types::calls::fs::Pread64 syscall: Ok(12)
+---- after pread64: Pread64 { fd: Fd(11), buf: RetBuffer([1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0]), arg_count: BufferLength(12), offset: Offset(15) }
+fuzzer_types::calls::fs::Pwrite64: Pwrite64 { fd: Fd(12), buf: ArgBuffer([102, 6, 11, 88, 59, 94, 67]), arg_count: BufferLength(7), offset: Offset(2) }
+---- result from fuzzer_types::calls::fs::Pwrite64 syscall: Ok(7)
+---- after pwrite64: Pwrite64 { fd: Fd(12), buf: ArgBuffer([102, 6, 11, 88, 59, 94, 67]), arg_count: BufferLength(7), offset: Offset(2) }
+fuzzer_types::calls::fs::Writev: Writev { fd: Fd(13), iov: ArgBuffer([Iovec { iov_base: ArgBuffer([124, 73, 28, 51, 15]), iov_len: BufferLength(5) }, Iovec { iov_base: ArgBuffer([39]), iov_len: BufferLength(1) }, Iovec { iov_base: ArgBuffer([0, 38, 120, 33, 12, 46]), iov_len: BufferLength(6) }, Iovec { iov_base: ArgBuffer([122]), iov_len: BufferLength(1) }, Iovec { iov_base: ArgBuffer([37, 23, 91, 91, 65, 56, 38, 92, 57]), iov_len: BufferLength(9) }, Iovec { iov_base: ArgBuffer([38, 13, 49, 52]), iov_len: BufferLength(4) }, Iovec { iov_base: ArgBuffer([103, 81, 24]), iov_len: BufferLength(3) }, Iovec { iov_base: ArgBuffer([16, 75, 121]), iov_len: BufferLength(3) }, Iovec { iov_base: ArgBuffer([31, 89, 57, 0, 41]), iov_len: BufferLength(5) }]), iovcnt: BufferLength(9) }
+---- result from fuzzer_types::calls::fs::Writev syscall: Ok(37)
+---- after writev: Writev { fd: Fd(13), iov: ArgBuffer([Iovec { iov_base: ArgBuffer([124, 73, 28, 51, 15]), iov_len: BufferLength(5) }, Iovec { iov_base: ArgBuffer([39]), iov_len: BufferLength(1) }, Iovec { iov_base: ArgBuffer([0, 38, 120, 33, 12, 46]), iov_len: BufferLength(6) }, Iovec { iov_base: ArgBuffer([122]), iov_len: BufferLength(1) }, Iovec { iov_base: ArgBuffer([37, 23, 91, 91, 65, 56, 38, 92, 57]), iov_len: BufferLength(9) }, Iovec { iov_base: ArgBuffer([38, 13, 49, 52]), iov_len: BufferLength(4) }, Iovec { iov_base: ArgBuffer([103, 81, 24]), iov_len: BufferLength(3) }, Iovec { iov_base: ArgBuffer([16, 75, 121]), iov_len: BufferLength(3) }, Iovec { iov_base: ArgBuffer([31, 89, 57, 0, 41]), iov_len: BufferLength(5) }]), iovcnt: BufferLength(9) }
+fuzzer_types::calls::fs::Readv: Readv { fd: Fd(14), iov: ArgBuffer([Iovec { iov_base: RetBuffer([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), iov_len: BufferLength(14) }, Iovec { iov_base: RetBuffer([]), iov_len: BufferLength(0) }, Iovec { iov_base: RetBuffer([0, 0]), iov_len: BufferLength(2) }, Iovec { iov_base: RetBuffer([0, 0, 0, 0]), iov_len: BufferLength(4) }, Iovec { iov_base: RetBuffer([0]), iov_len: BufferLength(1) }]), iovcnt: BufferLength(5) }
+---- result from fuzzer_types::calls::fs::Readv syscall: Err(9)
+---- after readv: Readv { fd: Fd(14), iov: ArgBuffer([Iovec { iov_base: RetBuffer([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), iov_len: BufferLength(14) }, Iovec { iov_base: RetBuffer([]), iov_len: BufferLength(0) }, Iovec { iov_base: RetBuffer([0, 0]), iov_len: BufferLength(2) }, Iovec { iov_base: RetBuffer([0, 0, 0, 0]), iov_len: BufferLength(4) }, Iovec { iov_base: RetBuffer([0]), iov_len: BufferLength(1) }]), iovcnt: BufferLength(5) }
+fuzzer_types::calls::fs::Access: Access { pathname: "./test1.txt", mode: AccessMode(3) }
+---- result from fuzzer_types::calls::fs::Access syscall: Err(13)
+---- after access: Access { pathname: "./test1.txt", mode: AccessMode(3) }
+fuzzer_types::calls::fs::Pipe: Pipe { pipefd: [Fd(0), Fd(0)] }
+---- result from fuzzer_types::calls::fs::Pipe syscall: Ok(0)
+---- after pipe: Pipe { pipefd: [Fd(15), Fd(16)] }
+fuzzer_types::calls::fs::Open: Open { pathname: "./test1.txt", flags: OpenFlag(2) }
+---- result from fuzzer_types::calls::fs::Open syscall: Ok(3)
+---- after open: Open { pathname: "./test1.txt", flags: OpenFlag(2) }
+fuzzer_types::calls::fs::Close: Close { fd: Fd(3) }
+---- result from fuzzer_types::calls::fs::Close syscall: Ok(0)
+---- after close: Close { fd: Fd(3) }
+fuzzer_types::calls::fs::Write: Write { fd: Fd(3), buf: ArgBuffer([34, 27, 11, 10, 7, 26, 29, 84, 15, 90, 42, 110, 28, 124, 25]), count: BufferLength(15) }
+---- result from fuzzer_types::calls::fs::Write syscall: Ok(15)
+---- after write: Write { fd: Fd(3), buf: ArgBuffer([34, 27, 11, 10, 7, 26, 29, 84, 15, 90, 42, 110, 28, 124, 25]), count: BufferLength(15) }
+fuzzer_types::calls::fs::Read: Read { fd: Fd(4), buf: RetBuffer([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), count: BufferLength(14) }
+---- result from fuzzer_types::calls::fs::Read syscall: Ok(14)
+---- after read: Read { fd: Fd(4), buf: RetBuffer([34, 27, 11, 10, 7, 26, 29, 84, 15, 90, 42, 110, 28, 124]), count: BufferLength(14) }
+fuzzer_types::calls::fs::Fstat: Fstat { fd: Fd(5), statbuf: stat { st_dev: 0, st_ino: 0, st_nlink: 0, st_mode: 0, st_uid: 0, st_gid: 0, __pad0: 0, st_rdev: 0, st_size: 0, st_blksize: 0, st_blocks: 0, st_atime: 0, st_atime_nsec: 0, st_mtime: 0, st_mtime_nsec: 0, st_ctime: 0, st_ctime_nsec: 0, __unused: [0, 0, 0] } }
+---- result from fuzzer_types::calls::fs::Fstat syscall: Ok(0)
+---- after fstat: Fstat { fd: Fd(5), statbuf: stat { st_dev: 66309, st_ino: 2228231, st_nlink: 1, st_mode: 33188, st_uid: 1000, st_gid: 1000, __pad0: 0, st_rdev: 0, st_size: 4614, st_blksize: 4096, st_blocks: 16, st_atime: 1625975685, st_atime_nsec: 421805066, st_mtime: 1626924787, st_mtime_nsec: 721828932, st_ctime: 1626924787, st_ctime_nsec: 721828932, __unused: [0, 0, 0] } }
+fuzzer_types::calls::fs::Stat: Stat { pathname: "./test1.txt", statbuf: stat { st_dev: 0, st_ino: 0, st_nlink: 0, st_mode: 0, st_uid: 0, st_gid: 0, __pad0: 0, st_rdev: 0, st_size: 0, st_blksize: 0, st_blocks: 0, st_atime: 0, st_atime_nsec: 0, st_mtime: 0, st_mtime_nsec: 0, st_ctime: 0, st_ctime_nsec: 0, __unused: [0, 0, 0] } }
+---- result from fuzzer_types::calls::fs::Stat syscall: Ok(0)
+---- after stat: Stat { pathname: "./test1.txt", statbuf: stat { st_dev: 66309, st_ino: 2228231, st_nlink: 1, st_mode: 33188, st_uid: 1000, st_gid: 1000, __pad0: 0, st_rdev: 0, st_size: 4614, st_blksize: 4096, st_blocks: 16, st_atime: 1625975685, st_atime_nsec: 421805066, st_mtime: 1626924787, st_mtime_nsec: 721828932, st_ctime: 1626924787, st_ctime_nsec: 721828932, __unused: [0, 0, 0] } }
+fuzzer_types::calls::fs::Lstat: Lstat { pathname: "./test1.txt", statbuf: stat { st_dev: 0, st_ino: 0, st_nlink: 0, st_mode: 0, st_uid: 0, st_gid: 0, __pad0: 0, st_rdev: 0, st_size: 0, st_blksize: 0, st_blocks: 0, st_atime: 0, st_atime_nsec: 0, st_mtime: 0, st_mtime_nsec: 0, st_ctime: 0, st_ctime_nsec: 0, __unused: [0, 0, 0] } }
+---- result from fuzzer_types::calls::fs::Lstat syscall: Ok(0)
+---- after lstat: Lstat { pathname: "./test1.txt", statbuf: stat { st_dev: 66309, st_ino: 2228231, st_nlink: 1, st_mode: 33188, st_uid: 1000, st_gid: 1000, __pad0: 0, st_rdev: 0, st_size: 4614, st_blksize: 4096, st_blocks: 16, st_atime: 1625975685, st_atime_nsec: 421805066, st_mtime: 1626924787, st_mtime_nsec: 721828932, st_ctime: 1626924787, st_ctime_nsec: 721828932, __unused: [0, 0, 0] } }
+fuzzer_types::calls::fs::Poll: Poll { fds: ArgBuffer([PollFd { fd: Fd(6), events: PollEvent(256), revents: PollEvent(0) }, PollFd { fd: Fd(7), events: PollEvent(16), revents: PollEvent(0) }, PollFd { fd: Fd(8), events: PollEvent(32), revents: PollEvent(0) }, PollFd { fd: Fd(9), events: PollEvent(2), revents: PollEvent(0) }, PollFd { fd: Fd(10), events: PollEvent(512), revents: PollEvent(0) }]), nfds: BufferLength(5), timeout: TimeMilliSec(903) }
+---- result from fuzzer_types::calls::fs::Poll syscall: Ok(1)
+---- after poll: Poll { fds: ArgBuffer([PollFd { fd: Fd(6), events: PollEvent(256), revents: PollEvent(256) }, PollFd { fd: Fd(7), events: PollEvent(16), revents: PollEvent(0) }, PollFd { fd: Fd(8), events: PollEvent(32), revents: PollEvent(0) }, PollFd { fd: Fd(9), events: PollEvent(2), revents: PollEvent(0) }, PollFd { fd: Fd(10), events: PollEvent(512), revents: PollEvent(0) }]), nfds: BufferLength(5), timeout: TimeMilliSec(903) }
+fuzzer_types::calls::fs::Lseek: Lseek { fd: Fd(11), offset: Offset(2627655867027777135), whence: SeekTask(3) }
+---- result from fuzzer_types::calls::fs::Lseek syscall: Err(6)
+---- after lseek: Lseek { fd: Fd(11), offset: Offset(2627655867027777135), whence: SeekTask(3) }
+fuzzer_types::calls::fs::Pread64: Pread64 { fd: Fd(12), buf: RetBuffer([0, 0, 0, 0, 0]), arg_count: BufferLength(5), offset: Offset(12) }
+---- result from fuzzer_types::calls::fs::Pread64 syscall: Err(9)
+---- after pread64: Pread64 { fd: Fd(12), buf: RetBuffer([0, 0, 0, 0, 0]), arg_count: BufferLength(5), offset: Offset(12) }
+fuzzer_types::calls::fs::Pwrite64: Pwrite64 { fd: Fd(13), buf: ArgBuffer([111, 100, 66, 80, 10, 119, 87, 19, 5, 52, 74, 33]), arg_count: BufferLength(12), offset: Offset(2) }
+---- result from fuzzer_types::calls::fs::Pwrite64 syscall: Err(9)
+---- after pwrite64: Pwrite64 { fd: Fd(13), buf: ArgBuffer([111, 100, 66, 80, 10, 119, 87, 19, 5, 52, 74, 33]), arg_count: BufferLength(12), offset: Offset(2) }
+fuzzer_types::calls::fs::Writev: Writev { fd: Fd(14), iov: ArgBuffer([Iovec { iov_base: ArgBuffer([119, 101, 64, 114, 87, 92, 93, 21, 10, 115, 94, 34, 97, 27, 125]), iov_len: BufferLength(15) }, Iovec { iov_base: ArgBuffer([17, 75, 82, 92, 72, 102, 49, 0, 73, 91, 95, 1, 45, 10, 98]), iov_len: BufferLength(15) }, Iovec { iov_base: ArgBuffer([3, 43, 13, 9, 35, 96, 91]), iov_len: BufferLength(7) }, Iovec { iov_base: ArgBuffer([59, 115, 112, 112, 76, 39, 124, 85, 108, 122, 126, 50]), iov_len: BufferLength(12) }]), iovcnt: BufferLength(4) }
+---- result from fuzzer_types::calls::fs::Writev syscall: Ok(49)
+---- after writev: Writev { fd: Fd(14), iov: ArgBuffer([Iovec { iov_base: ArgBuffer([119, 101, 64, 114, 87, 92, 93, 21, 10, 115, 94, 34, 97, 27, 125]), iov_len: BufferLength(15) }, Iovec { iov_base: ArgBuffer([17, 75, 82, 92, 72, 102, 49, 0, 73, 91, 95, 1, 45, 10, 98]), iov_len: BufferLength(15) }, Iovec { iov_base: ArgBuffer([3, 43, 13, 9, 35, 96, 91]), iov_len: BufferLength(7) }, Iovec { iov_base: ArgBuffer([59, 115, 112, 112, 76, 39, 124, 85, 108, 122, 126, 50]), iov_len: BufferLength(12) }]), iovcnt: BufferLength(4) }
+fuzzer_types::calls::fs::Readv: Readv { fd: Fd(15), iov: ArgBuffer([Iovec { iov_base: RetBuffer([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), iov_len: BufferLength(13) }, Iovec { iov_base: RetBuffer([0, 0, 0, 0, 0, 0, 0, 0]), iov_len: BufferLength(8) }, Iovec { iov_base: RetBuffer([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), iov_len: BufferLength(15) }, Iovec { iov_base: RetBuffer([0, 0, 0, 0]), iov_len: BufferLength(4) }, Iovec { iov_base: RetBuffer([0, 0, 0, 0, 0, 0, 0, 0, 0]), iov_len: BufferLength(9) }, Iovec { iov_base: RetBuffer([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), iov_len: BufferLength(12) }, Iovec { iov_base: RetBuffer([0, 0, 0]), iov_len: BufferLength(3) }, Iovec { iov_base: RetBuffer([0, 0, 0]), iov_len: BufferLength(3) }, Iovec { iov_base: RetBuffer([0, 0, 0, 0, 0]), iov_len: BufferLength(5) }]), iovcnt: BufferLength(9) }
+---- result from fuzzer_types::calls::fs::Readv syscall: Ok(72)
+---- after readv: Readv { fd: Fd(15), iov: ArgBuffer([Iovec { iov_base: RetBuffer([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), iov_len: BufferLength(13) }, Iovec { iov_base: RetBuffer([0, 0, 0, 0, 0, 0, 0, 0]), iov_len: BufferLength(8) }, Iovec { iov_base: RetBuffer([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), iov_len: BufferLength(15) }, Iovec { iov_base: RetBuffer([0, 0, 0, 0]), iov_len: BufferLength(4) }, Iovec { iov_base: RetBuffer([0, 0, 0, 0, 0, 0, 0, 0, 0]), iov_len: BufferLength(9) }, Iovec { iov_base: RetBuffer([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), iov_len: BufferLength(12) }, Iovec { iov_base: RetBuffer([0, 0, 0]), iov_len: BufferLength(3) }, Iovec { iov_base: RetBuffer([0, 0, 0]), iov_len: BufferLength(3) }, Iovec { iov_base: RetBuffer([0, 0, 0, 0, 0]), iov_len: BufferLength(5) }]), iovcnt: BufferLength(9) }
+fuzzer_types::calls::fs::Access: Access { pathname: "./test1.txt", mode: AccessMode(3) }
+---- result from fuzzer_types::calls::fs::Access syscall: Err(13)
+---- after access: Access { pathname: "./test1.txt", mode: AccessMode(3) }
+fuzzer_types::calls::fs::Pipe: Pipe { pipefd: [Fd(0), Fd(0)] }
+---- result from fuzzer_types::calls::fs::Pipe syscall: Ok(0)
+---- after pipe: Pipe { pipefd: [Fd(16), Fd(17)] }
+fuzzer_types::calls::fs::Open: Open { pathname: "./test1.txt", flags: OpenFlag(0) }
+---- result from fuzzer_types::calls::fs::Open syscall: Ok(3)
+---- after open: Open { pathname: "./test1.txt", flags: OpenFlag(0) }
+fuzzer_types::calls::fs::Close: Close { fd: Fd(3) }
+---- result from fuzzer_types::calls::fs::Close syscall: Ok(0)
+---- after close: Close { fd: Fd(3) }
+fuzzer_types::calls::fs::Write: Write { fd: Fd(3), buf: ArgBuffer([101, 25, 64, 22, 51, 28, 124, 101, 15, 29, 112, 90]), count: BufferLength(12) }
+---- result from fuzzer_types::calls::fs::Write syscall: Ok(12)
+---- after write: Write { fd: Fd(3), buf: ArgBuffer([101, 25, 64, 22, 51, 28, 124, 101, 15, 29, 112, 90]), count: BufferLength(12) }
+fuzzer_types::calls::fs::Read: Read { fd: Fd(4), buf: RetBuffer([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), count: BufferLength(11) }
+---- result from fuzzer_types::calls::fs::Read syscall: Ok(11)
+---- after read: Read { fd: Fd(4), buf: RetBuffer([101, 25, 64, 22, 51, 28, 124, 101, 15, 29, 112]), count: BufferLength(11) }
+fuzzer_types::calls::fs::Fstat: Fstat { fd: Fd(5), statbuf: stat { st_dev: 0, st_ino: 0, st_nlink: 0, st_mode: 0, st_uid: 0, st_gid: 0, __pad0: 0, st_rdev: 0, st_size: 0, st_blksize: 0, st_blocks: 0, st_atime: 0, st_atime_nsec: 0, st_mtime: 0, st_mtime_nsec: 0, st_ctime: 0, st_ctime_nsec: 0, __unused: [0, 0, 0] } }
+---- result from fuzzer_types::calls::fs::Fstat syscall: Ok(0)
+---- after fstat: Fstat { fd: Fd(5), statbuf: stat { st_dev: 66309, st_ino: 2228231, st_nlink: 1, st_mode: 33188, st_uid: 1000, st_gid: 1000, __pad0: 0, st_rdev: 0, st_size: 4614, st_blksize: 4096, st_blocks: 16, st_atime: 1625975685, st_atime_nsec: 421805066, st_mtime: 1626924791, st_mtime_nsec: 721828795, st_ctime: 1626924791, st_ctime_nsec: 721828795, __unused: [0, 0, 0] } }
+fuzzer_types::calls::fs::Stat: Stat { pathname: "./test1.txt", statbuf: stat { st_dev: 0, st_ino: 0, st_nlink: 0, st_mode: 0, st_uid: 0, st_gid: 0, __pad0: 0, st_rdev: 0, st_size: 0, st_blksize: 0, st_blocks: 0, st_atime: 0, st_atime_nsec: 0, st_mtime: 0, st_mtime_nsec: 0, st_ctime: 0, st_ctime_nsec: 0, __unused: [0, 0, 0] } }
+---- result from fuzzer_types::calls::fs::Stat syscall: Ok(0)
+---- after stat: Stat { pathname: "./test1.txt", statbuf: stat { st_dev: 66309, st_ino: 2228231, st_nlink: 1, st_mode: 33188, st_uid: 1000, st_gid: 1000, __pad0: 0, st_rdev: 0, st_size: 4614, st_blksize: 4096, st_blocks: 16, st_atime: 1625975685, st_atime_nsec: 421805066, st_mtime: 1626924791, st_mtime_nsec: 721828795, st_ctime: 1626924791, st_ctime_nsec: 721828795, __unused: [0, 0, 0] } }
+fuzzer_types::calls::fs::Lstat: Lstat { pathname: "./test1.txt", statbuf: stat { st_dev: 0, st_ino: 0, st_nlink: 0, st_mode: 0, st_uid: 0, st_gid: 0, __pad0: 0, st_rdev: 0, st_size: 0, st_blksize: 0, st_blocks: 0, st_atime: 0, st_atime_nsec: 0, st_mtime: 0, st_mtime_nsec: 0, st_ctime: 0, st_ctime_nsec: 0, __unused: [0, 0, 0] } }
+---- result from fuzzer_types::calls::fs::Lstat syscall: Ok(0)
+---- after lstat: Lstat { pathname: "./test1.txt", statbuf: stat { st_dev: 66309, st_ino: 2228231, st_nlink: 1, st_mode: 33188, st_uid: 1000, st_gid: 1000, __pad0: 0, st_rdev: 0, st_size: 4614, st_blksize: 4096, st_blocks: 16, st_atime: 1625975685, st_atime_nsec: 421805066, st_mtime: 1626924791, st_mtime_nsec: 721828795, st_ctime: 1626924791, st_ctime_nsec: 721828795, __unused: [0, 0, 0] } }
+fuzzer_types::calls::fs::Poll: Poll { fds: ArgBuffer([PollFd { fd: Fd(6), events: PollEvent(512), revents: PollEvent(0) }, PollFd { fd: Fd(7), events: PollEvent(4), revents: PollEvent(0) }, PollFd { fd: Fd(8), events: PollEvent(8), revents: PollEvent(0) }, PollFd { fd: Fd(9), events: PollEvent(8), revents: PollEvent(0) }, PollFd { fd: Fd(10), events: PollEvent(16), revents: PollEvent(0) }, PollFd { fd: Fd(11), events: PollEvent(4), revents: PollEvent(0) }, PollFd { fd: Fd(12), events: PollEvent(32), revents: PollEvent(0) }, PollFd { fd: Fd(13), events: PollEvent(1), revents: PollEvent(0) }, PollFd { fd: Fd(14), events: PollEvent(1), revents: PollEvent(0) }, PollFd { fd: Fd(15), events: PollEvent(4), revents: PollEvent(0) }, PollFd { fd: Fd(16), events: PollEvent(2), revents: PollEvent(0) }, PollFd { fd: Fd(17), events: PollEvent(8), revents: PollEvent(0) }, PollFd { fd: Fd(18), events: PollEvent(16), revents: PollEvent(0) }]), nfds: BufferLength(13), timeout: TimeMilliSec(819) }
+---- result from fuzzer_types::calls::fs::Poll syscall: Ok(5)
+---- after poll: Poll { fds: ArgBuffer([PollFd { fd: Fd(6), events: PollEvent(512), revents: PollEvent(0) }, PollFd { fd: Fd(7), events: PollEvent(4), revents: PollEvent(4) }, PollFd { fd: Fd(8), events: PollEvent(8), revents: PollEvent(0) }, PollFd { fd: Fd(9), events: PollEvent(8), revents: PollEvent(0) }, PollFd { fd: Fd(10), events: PollEvent(16), revents: PollEvent(0) }, PollFd { fd: Fd(11), events: PollEvent(4), revents: PollEvent(4) }, PollFd { fd: Fd(12), events: PollEvent(32), revents: PollEvent(0) }, PollFd { fd: Fd(13), events: PollEvent(1), revents: PollEvent(1) }, PollFd { fd: Fd(14), events: PollEvent(1), revents: PollEvent(1) }, PollFd { fd: Fd(15), events: PollEvent(4), revents: PollEvent(4) }, PollFd { fd: Fd(16), events: PollEvent(2), revents: PollEvent(0) }, PollFd { fd: Fd(17), events: PollEvent(8), revents: PollEvent(0) }, PollFd { fd: Fd(18), events: PollEvent(16), revents: PollEvent(0) }]), nfds: BufferLength(13), timeout: TimeMilliSec(819) }
+fuzzer_types::calls::fs::Lseek: Lseek { fd: Fd(21), offset: Offset(-4597578432282650888), whence: SeekTask(0) }
+---- result from fuzzer_types::calls::fs::Lseek syscall: Err(22)
+---- after lseek: Lseek { fd: Fd(21), offset: Offset(-4597578432282650888), whence: SeekTask(0) }
+fuzzer_types::calls::fs::Pread64: Pread64 { fd: Fd(22), buf: RetBuffer([0, 0]), arg_count: BufferLength(2), offset: Offset(8697151688651139239) }
+---- result from fuzzer_types::calls::fs::Pread64 syscall: Ok(0)
+---- after pread64: Pread64 { fd: Fd(22), buf: RetBuffer([0, 0]), arg_count: BufferLength(2), offset: Offset(8697151688651139239) }
+fuzzer_types::calls::fs::Pwrite64: Pwrite64 { fd: Fd(23), buf: ArgBuffer([65, 27, 2, 109, 102]), arg_count: BufferLength(5), offset: Offset(-6872718128347821764) }
+---- result from fuzzer_types::calls::fs::Pwrite64 syscall: Err(22)
+---- after pwrite64: Pwrite64 { fd: Fd(23), buf: ArgBuffer([65, 27, 2, 109, 102]), arg_count: BufferLength(5), offset: Offset(-6872718128347821764) }
+fuzzer_types::calls::fs::Writev: Writev { fd: Fd(24), iov: ArgBuffer([Iovec { iov_base: ArgBuffer([27]), iov_len: BufferLength(1) }, Iovec { iov_base: ArgBuffer([68, 126, 88, 94, 70, 83, 54, 100, 83, 1, 60, 39, 23, 32]), iov_len: BufferLength(14) }, Iovec { iov_base: ArgBuffer([64, 36, 68, 88, 77, 33, 6]), iov_len: BufferLength(7) }, Iovec { iov_base: ArgBuffer([8, 53, 34, 122, 3, 5]), iov_len: BufferLength(6) }, Iovec { iov_base: ArgBuffer([]), iov_len: BufferLength(0) }, Iovec { iov_base: ArgBuffer([49, 58, 117, 21, 63, 104, 116, 2, 16, 95, 70]), iov_len: BufferLength(11) }, Iovec { iov_base: ArgBuffer([98, 98, 61, 116, 66, 26, 40, 93, 45]), iov_len: BufferLength(9) }, Iovec { iov_base: ArgBuffer([34, 124]), iov_len: BufferLength(2) }, Iovec { iov_base: ArgBuffer([38, 109, 75, 110, 31, 60, 1, 30, 104, 104, 31, 16, 43]), iov_len: BufferLength(13) }]), iovcnt: BufferLength(9) }
+---- result from fuzzer_types::calls::fs::Writev syscall: Err(9)
+---- after writev: Writev { fd: Fd(24), iov: ArgBuffer([Iovec { iov_base: ArgBuffer([27]), iov_len: BufferLength(1) }, Iovec { iov_base: ArgBuffer([68, 126, 88, 94, 70, 83, 54, 100, 83, 1, 60, 39, 23, 32]), iov_len: BufferLength(14) }, Iovec { iov_base: ArgBuffer([64, 36, 68, 88, 77, 33, 6]), iov_len: BufferLength(7) }, Iovec { iov_base: ArgBuffer([8, 53, 34, 122, 3, 5]), iov_len: BufferLength(6) }, Iovec { iov_base: ArgBuffer([]), iov_len: BufferLength(0) }, Iovec { iov_base: ArgBuffer([49, 58, 117, 21, 63, 104, 116, 2, 16, 95, 70]), iov_len: BufferLength(11) }, Iovec { iov_base: ArgBuffer([98, 98, 61, 116, 66, 26, 40, 93, 45]), iov_len: BufferLength(9) }, Iovec { iov_base: ArgBuffer([34, 124]), iov_len: BufferLength(2) }, Iovec { iov_base: ArgBuffer([38, 109, 75, 110, 31, 60, 1, 30, 104, 104, 31, 16, 43]), iov_len: BufferLength(13) }]), iovcnt: BufferLength(9) }
+fuzzer_types::calls::fs::Readv: Readv { fd: Fd(25), iov: ArgBuffer([Iovec { iov_base: RetBuffer([0, 0, 0]), iov_len: BufferLength(3) }, Iovec { iov_base: RetBuffer([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), iov_len: BufferLength(11) }, Iovec { iov_base: RetBuffer([0, 0, 0, 0, 0, 0]), iov_len: BufferLength(6) }, Iovec { iov_base: RetBuffer([0, 0, 0, 0]), iov_len: BufferLength(4) }, Iovec { iov_base: RetBuffer([0, 0, 0, 0, 0, 0, 0, 0]), iov_len: BufferLength(8) }, Iovec { iov_base: RetBuffer([0, 0, 0, 0, 0, 0, 0, 0, 0]), iov_len: BufferLength(9) }, Iovec { iov_base: RetBuffer([0, 0, 0, 0]), iov_len: BufferLength(4) }, Iovec { iov_base: RetBuffer([0, 0, 0, 0, 0, 0]), iov_len: BufferLength(6) }, Iovec { iov_base: RetBuffer([0, 0, 0]), iov_len: BufferLength(3) }, Iovec { iov_base: RetBuffer([0, 0, 0]), iov_len: BufferLength(3) }, Iovec { iov_base: RetBuffer([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), iov_len: BufferLength(11) }, Iovec { iov_base: RetBuffer([]), iov_len: BufferLength(0) }]), iovcnt: BufferLength(12) }
+---- result from fuzzer_types::calls::fs::Readv syscall: Ok(68)
+---- after readv: Readv { fd: Fd(25), iov: ArgBuffer([Iovec { iov_base: RetBuffer([0, 0, 0]), iov_len: BufferLength(3) }, Iovec { iov_base: RetBuffer([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), iov_len: BufferLength(11) }, Iovec { iov_base: RetBuffer([0, 0, 0, 0, 0, 0]), iov_len: BufferLength(6) }, Iovec { iov_base: RetBuffer([0, 0, 0, 0]), iov_len: BufferLength(4) }, Iovec { iov_base: RetBuffer([0, 0, 0, 0, 0, 0, 0, 0]), iov_len: BufferLength(8) }, Iovec { iov_base: RetBuffer([0, 0, 0, 0, 0, 0, 0, 0, 0]), iov_len: BufferLength(9) }, Iovec { iov_base: RetBuffer([0, 0, 0, 0]), iov_len: BufferLength(4) }, Iovec { iov_base: RetBuffer([0, 0, 0, 0, 0, 0]), iov_len: BufferLength(6) }, Iovec { iov_base: RetBuffer([0, 0, 0]), iov_len: BufferLength(3) }, Iovec { iov_base: RetBuffer([0, 0, 0]), iov_len: BufferLength(3) }, Iovec { iov_base: RetBuffer([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), iov_len: BufferLength(11) }, Iovec { iov_base: RetBuffer([]), iov_len: BufferLength(0) }]), iovcnt: BufferLength(12) }
+fuzzer_types::calls::fs::Access: Access { pathname: "./test1.txt", mode: AccessMode(0) }
+---- result from fuzzer_types::calls::fs::Access syscall: Ok(0)
+---- after access: Access { pathname: "./test1.txt", mode: AccessMode(0) }
+fuzzer_types::calls::fs::Pipe: Pipe { pipefd: [Fd(0), Fd(0)] }
+---- result from fuzzer_types::calls::fs::Pipe syscall: Ok(0)
+---- after pipe: Pipe { pipefd: [Fd(26), Fd(27)] }
+fuzzer_types::calls::time::Nanosleep: Nanosleep { req: timespec { tv_sec: 3, tv_nsec: 529150141 }, rem: timespec { tv_sec: 3, tv_nsec: 433244003 } }
+---- result from fuzzer_types::calls::time::Nanosleep syscall: Ok(0)
+---- after nanosleep: Nanosleep { req: timespec { tv_sec: 3, tv_nsec: 529150141 }, rem: timespec { tv_sec: 3, tv_nsec: 433244003 } }
+fuzzer_types::calls::time::Nanosleep: Nanosleep { req: timespec { tv_sec: 3, tv_nsec: 85512978 }, rem: timespec { tv_sec: 3, tv_nsec: 431346331 } }
+---- result from fuzzer_types::calls::time::Nanosleep syscall: Ok(0)
+---- after nanosleep: Nanosleep { req: timespec { tv_sec: 3, tv_nsec: 85512978 }, rem: timespec { tv_sec: 3, tv_nsec: 431346331 } }
+fuzzer_types::calls::time::Nanosleep: Nanosleep { req: timespec { tv_sec: 3, tv_nsec: 478644 }, rem: timespec { tv_sec: 3, tv_nsec: 780946880 } }
+---- result from fuzzer_types::calls::time::Nanosleep syscall: Ok(0)
+---- after nanosleep: Nanosleep { req: timespec { tv_sec: 3, tv_nsec: 478644 }, rem: timespec { tv_sec: 3, tv_nsec: 780946880 } }
+fuzzer_types::calls::synchro::Rt_sigprocmask: Rt_sigprocmask { how: SigHow(1), set: sigset_t { __val: [4469856457063567715, 14107598051632437065, 13302199769639707448, 14166277819823866889, 13932776288885760879, 6776728975383182204, 327076295281985991, 8086671429782380022, 15385030405944368380, 16867715288259942514, 6421542653175422630, 3506511901667361232, 10766594375191188367, 3087984161023639581, 8465595575072531813, 6353260408153656924] }, oldset: sigset_t { __val: [12667680374030339236, 5549869893433299993, 5677746594175269815, 13060496885731242336, 6712625037354309083, 5558342062645266746, 6372808469062342273, 5744839775622992069, 13019073937595120535, 17872957854301960822, 5929368784386047819, 3588238312273837877, 8877851506584283665, 13420151409584082695, 1408352274756906795, 1757758038715977268] }, sigsetsize: SigsetSize(8) }
+---- result from fuzzer_types::calls::synchro::Rt_sigprocmask syscall: Ok(0)
+---- after lstat: Rt_sigprocmask { how: SigHow(1), set: sigset_t { __val: [4469856457063567715, 14107598051632437065, 13302199769639707448, 14166277819823866889, 13932776288885760879, 6776728975383182204, 327076295281985991, 8086671429782380022, 15385030405944368380, 16867715288259942514, 6421542653175422630, 3506511901667361232, 10766594375191188367, 3087984161023639581, 8465595575072531813, 6353260408153656924] }, oldset: sigset_t { __val: [0, 5549869893433299993, 5677746594175269815, 13060496885731242336, 6712625037354309083, 5558342062645266746, 6372808469062342273, 5744839775622992069, 13019073937595120535, 17872957854301960822, 5929368784386047819, 3588238312273837877, 8877851506584283665, 13420151409584082695, 1408352274756906795, 1757758038715977268] }, sigsetsize: SigsetSize(8) }
+fuzzer_types::calls::synchro::Rt_sigprocmask: Rt_sigprocmask { how: SigHow(0), set: sigset_t { __val: [2803147694775166277, 381281550661481175, 5082361700077338622, 8471467306374947135, 16353178897466857494, 14583823750735803255, 8235136416300982550, 5452833518771806737, 11086771388656666892, 8921895913838863420, 16349760073739451685, 17549496644093186692, 1239232448343554174, 11084127375962219969, 4880152669112275738, 12784645505741078407] }, oldset: sigset_t { __val: [13336921927253790280, 13293401716328726786, 15559414484590448874, 12062042899064340631, 4982241584070258279, 4211912936646944212, 2580733595792156415, 2435117330757235772, 16737608393218547780, 4058556874163697131, 2411534595698818075, 3556603271357091476, 8363295454001479751, 18314966967223684656, 9656171520445920189, 15600866984364041749] }, sigsetsize: SigsetSize(8) }
+---- result from fuzzer_types::calls::synchro::Rt_sigprocmask syscall: Ok(0)
+---- after lstat: Rt_sigprocmask { how: SigHow(0), set: sigset_t { __val: [2803147694775166277, 381281550661481175, 5082361700077338622, 8471467306374947135, 16353178897466857494, 14583823750735803255, 8235136416300982550, 5452833518771806737, 11086771388656666892, 8921895913838863420, 16349760073739451685, 17549496644093186692, 1239232448343554174, 11084127375962219969, 4880152669112275738, 12784645505741078407] }, oldset: sigset_t { __val: [0, 13293401716328726786, 15559414484590448874, 12062042899064340631, 4982241584070258279, 4211912936646944212, 2580733595792156415, 2435117330757235772, 16737608393218547780, 4058556874163697131, 2411534595698818075, 3556603271357091476, 8363295454001479751, 18314966967223684656, 9656171520445920189, 15600866984364041749] }, sigsetsize: SigsetSize(8) }
+fuzzer_types::calls::synchro::Rt_sigprocmask: Rt_sigprocmask { how: SigHow(1), set: sigset_t { __val: [1814877200146227569, 1650307523073716578, 14398065653706154116, 553791621201584753, 6014655631242375798, 2103257499389510822, 3627268048723969381, 2669109518464804452, 7568548369853111001, 5249139447339558950, 11434858184680253927, 8671067784368208709, 5954042859230760570, 7017182549462423481, 4185748660821134911, 12221228693087118995] }, oldset: sigset_t { __val: [11058880938260739761, 6869332727863407012, 5714598559265460867, 6133253931657531493, 9243299475869943134, 16735990404125435555, 3823799023393752152, 17486038252187748165, 14076513349785702682, 7266141342633936902, 13361014767850376411, 7985224619319712819, 6334181022660612200, 14193797780640036029, 14737576074118536480, 12247712448673892961] }, sigsetsize: SigsetSize(8) }
+---- result from fuzzer_types::calls::synchro::Rt_sigprocmask syscall: Ok(0)
+---- after lstat: Rt_sigprocmask { how: SigHow(1), set: sigset_t { __val: [1814877200146227569, 1650307523073716578, 14398065653706154116, 553791621201584753, 6014655631242375798, 2103257499389510822, 3627268048723969381, 2669109518464804452, 7568548369853111001, 5249139447339558950, 11434858184680253927, 8671067784368208709, 5954042859230760570, 7017182549462423481, 4185748660821134911, 12221228693087118995] }, oldset: sigset_t { __val: [2803147694774903877, 6869332727863407012, 5714598559265460867, 6133253931657531493, 9243299475869943134, 16735990404125435555, 3823799023393752152, 17486038252187748165, 14076513349785702682, 7266141342633936902, 13361014767850376411, 7985224619319712819, 6334181022660612200, 14193797780640036029, 14737576074118536480, 12247712448673892961] }, sigsetsize: SigsetSize(8) }
+fuzzer_types::calls::synchro::Sched_yield: Sched_yield
+---- result from fuzzer_types::calls::synchro::Sched_yield syscall: Ok(0)
+---- after lstat: Sched_yield
+fuzzer_types::calls::aux::Gettid: Gettid
+---- result from fuzzer_types::calls::aux::Gettid syscall: Ok(3823)
+---- after gettid: Gettid
+fuzzer_types::calls::aux::Getuid: Getuid
+---- result from fuzzer_types::calls::aux::Getuid syscall: Ok(1000)
+---- after getuid: Getuid
+fuzzer_types::calls::aux::Geteuid: Geteuid
+---- result from fuzzer_types::calls::aux::Geteuid syscall: Ok(1000)
+---- after geteuid: Geteuid
+fuzzer_types::calls::aux::Getpid: Getpid
+---- result from fuzzer_types::calls::aux::Getpid syscall: Ok(3679)
+---- after getpid: Getpid
+fuzzer_types::calls::aux::Getppid: Getppid
+---- result from fuzzer_types::calls::aux::Getppid syscall: Ok(2390)
+---- after getppid: Getppid
+fuzzer_types::calls::synchro::Sched_yield: Sched_yield
+---- result from fuzzer_types::calls::synchro::Sched_yield syscall: Ok(0)
+---- after lstat: Sched_yield
+fuzzer_types::calls::aux::Gettid: Gettid
+---- result from fuzzer_types::calls::aux::Gettid syscall: Ok(3824)
+---- after gettid: Gettid
+fuzzer_types::calls::aux::Getuid: Getuid
+---- result from fuzzer_types::calls::aux::Getuid syscall: Ok(1000)
+---- after getuid: Getuid
+fuzzer_types::calls::aux::Geteuid: Geteuid
+---- result from fuzzer_types::calls::aux::Geteuid syscall: Ok(1000)
+---- after geteuid: Geteuid
+fuzzer_types::calls::aux::Getpid: Getpid
+---- result from fuzzer_types::calls::aux::Getpid syscall: Ok(3679)
+---- after getpid: Getpid
+fuzzer_types::calls::aux::Getppid: Getppid
+---- result from fuzzer_types::calls::aux::Getppid syscall: Ok(2390)
+---- after getppid: Getppid
+fuzzer_types::calls::synchro::Sched_yield: Sched_yield
+---- result from fuzzer_types::calls::synchro::Sched_yield syscall: Ok(0)
+---- after lstat: Sched_yield
+fuzzer_types::calls::aux::Gettid: Gettid
+---- result from fuzzer_types::calls::aux::Gettid syscall: Ok(3825)
+---- after gettid: Gettid
+fuzzer_types::calls::aux::Getuid: Getuid
+---- result from fuzzer_types::calls::aux::Getuid syscall: Ok(1000)
+---- after getuid: Getuid
+fuzzer_types::calls::aux::Geteuid: Geteuid
+---- result from fuzzer_types::calls::aux::Geteuid syscall: Ok(1000)
+---- after geteuid: Geteuid
+fuzzer_types::calls::aux::Getpid: Getpid
+---- result from fuzzer_types::calls::aux::Getpid syscall: Ok(3679)
+---- after getpid: Getpid
+fuzzer_types::calls::aux::Getppid: Getppid
+---- result from fuzzer_types::calls::aux::Getppid syscall: Ok(2390)
+---- after getppid: Getppid
+fuzzer_types::calls::net::Socket: Socket { domain: Domain(31), sock_type: SockType(6), protocol: Protocol(0) }
+---- result from fuzzer_types::calls::net::Socket syscall: Err(94)
+---- after lstat: Socket { domain: Domain(31), sock_type: SockType(6), protocol: Protocol(0) }
+fuzzer_types::calls::net::Connect: Connect { sockfd: SockFd(3), addr: ArgBuffer([29, 35, 99, 66, 19, 36]), addrlen: BufferLength(6) }
+---- result from fuzzer_types::calls::net::Connect syscall: Err(22)
+---- after lstat: Connect { sockfd: SockFd(3), addr: ArgBuffer([29, 35, 99, 66, 19, 36]), addrlen: BufferLength(6) }
+fuzzer_types::calls::net::Send: Send { sockfd: SockFd(4), buf: ArgBuffer([]), len: BufferLength(0), flags: MsgFlag(1073859435) }
+---- result from fuzzer_types::calls::net::Send syscall: Err(107)
+---- after lstat: Send { sockfd: SockFd(4), buf: ArgBuffer([]), len: BufferLength(0), flags: MsgFlag(1073859435) }
+fuzzer_types::calls::net::SendTo: SendTo { sockfd: SockFd(5), buf: ArgBuffer([79, 109, 117, 34, 66]), len: BufferLength(5), flags: MsgFlag(536999782), dest_addr: ArgBuffer([124, 71, 88, 72, 66, 63, 117, 39, 89, 44, 104, 52, 48, 31]), addrlen: BufferLength(14) }
+---- result from fuzzer_types::calls::net::SendTo syscall: Err(107)
+---- after lstat: SendTo { sockfd: SockFd(5), buf: ArgBuffer([79, 109, 117, 34, 66]), len: BufferLength(5), flags: MsgFlag(536999782), dest_addr: ArgBuffer([124, 71, 88, 72, 66, 63, 117, 39, 89, 44, 104, 52, 48, 31]), addrlen: BufferLength(14) }
+fuzzer_types::calls::net::RecvFrom: RecvFrom { sockfd: SockFd(6), buf: RetBuffer([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), len: BufferLength(14), flags: MsgFlag(1073867725), src_addr: ArgBuffer([12, 14, 52, 93, 68, 13, 107, 58, 116, 1, 125, 9]), addrlen: BufferLength(12) }
+---- result from fuzzer_types::calls::net::RecvFrom syscall: Err(107)
+---- after lstat: RecvFrom { sockfd: SockFd(6), buf: RetBuffer([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), len: BufferLength(14), flags: MsgFlag(1073867725), src_addr: ArgBuffer([12, 14, 52, 93, 68, 13, 107, 58, 116, 1, 125, 9]), addrlen: BufferLength(12) }
+fuzzer_types::calls::net::Getsockopt: Getsockopt { socket: SockFd(7), level: Level(264), optname: OptName(41), optval: RetBuffer([0, 0, 0, 0, 0]), optlen: 5 }
+---- result from fuzzer_types::calls::net::Getsockopt syscall: Err(22)
+---- after lstat: Getsockopt { socket: SockFd(7), level: Level(264), optname: OptName(41), optval: RetBuffer([0, 0, 0, 0, 0]), optlen: 5 }
+fuzzer_types::calls::net::Setsockopt: Setsockopt { socket: SockFd(8), level: Level(261), optname: OptName(9), optval: ArgBuffer([53, 16, 1, 71, 122, 69, 50, 12, 108, 68, 6, 88, 14, 12]), optlen: BufferLength(14) }
+---- result from fuzzer_types::calls::net::Setsockopt syscall: Err(92)
+---- after lstat: Setsockopt { socket: SockFd(8), level: Level(261), optname: OptName(9), optval: ArgBuffer([53, 16, 1, 71, 122, 69, 50, 12, 108, 68, 6, 88, 14, 12]), optlen: BufferLength(14) }
+fuzzer_types::calls::net::Socket: Socket { domain: Domain(10), sock_type: SockType(5), protocol: Protocol(0) }
+---- result from fuzzer_types::calls::net::Socket syscall: Err(94)
+---- after lstat: Socket { domain: Domain(10), sock_type: SockType(5), protocol: Protocol(0) }
+fuzzer_types::calls::net::Connect: Connect { sockfd: SockFd(3), addr: ArgBuffer([7, 93]), addrlen: BufferLength(2) }
+---- result from fuzzer_types::calls::net::Connect syscall: Err(22)
+---- after lstat: Connect { sockfd: SockFd(3), addr: ArgBuffer([7, 93]), addrlen: BufferLength(2) }
+fuzzer_types::calls::net::Send: Send { sockfd: SockFd(4), buf: ArgBuffer([120, 4, 68]), len: BufferLength(3), flags: MsgFlag(1073806306) }
+---- result from fuzzer_types::calls::net::Send syscall: Err(107)
+---- after lstat: Send { sockfd: SockFd(4), buf: ArgBuffer([120, 4, 68]), len: BufferLength(3), flags: MsgFlag(1073806306) }
+fuzzer_types::calls::net::SendTo: SendTo { sockfd: SockFd(5), buf: ArgBuffer([67, 85, 47, 63, 33, 90, 97, 23]), len: BufferLength(8), flags: MsgFlag(1610684271), dest_addr: ArgBuffer([60, 118, 13, 43, 39, 16]), addrlen: BufferLength(6) }
+---- result from fuzzer_types::calls::net::SendTo syscall: Err(22)
+---- after lstat: SendTo { sockfd: SockFd(5), buf: ArgBuffer([67, 85, 47, 63, 33, 90, 97, 23]), len: BufferLength(8), flags: MsgFlag(1610684271), dest_addr: ArgBuffer([60, 118, 13, 43, 39, 16]), addrlen: BufferLength(6) }
+fuzzer_types::calls::net::RecvFrom: RecvFrom { sockfd: SockFd(6), buf: RetBuffer([0]), len: BufferLength(1), flags: MsgFlag(105895), src_addr: ArgBuffer([44, 89, 29, 66, 52, 125, 89]), addrlen: BufferLength(7) }
+---- result from fuzzer_types::calls::net::RecvFrom syscall: Err(107)
+---- after lstat: RecvFrom { sockfd: SockFd(6), buf: RetBuffer([0]), len: BufferLength(1), flags: MsgFlag(105895), src_addr: ArgBuffer([44, 89, 29, 66, 52, 125, 89]), addrlen: BufferLength(7) }
+fuzzer_types::calls::net::Getsockopt: Getsockopt { socket: SockFd(7), level: Level(267), optname: OptName(30), optval: RetBuffer([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), optlen: 14 }
+---- result from fuzzer_types::calls::net::Getsockopt syscall: Err(92)
+---- after lstat: Getsockopt { socket: SockFd(7), level: Level(267), optname: OptName(30), optval: RetBuffer([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), optlen: 14 }
+fuzzer_types::calls::net::Setsockopt: Setsockopt { socket: SockFd(8), level: Level(261), optname: OptName(23), optval: ArgBuffer([86, 122, 24]), optlen: BufferLength(3) }
+---- result from fuzzer_types::calls::net::Setsockopt syscall: Err(22)
+---- after lstat: Setsockopt { socket: SockFd(8), level: Level(261), optname: OptName(23), optval: ArgBuffer([86, 122, 24]), optlen: BufferLength(3) }
+fuzzer_types::calls::net::Socket: Socket { domain: Domain(21), sock_type: SockType(4), protocol: Protocol(0) }
+---- result from fuzzer_types::calls::net::Socket syscall: Err(94)
+---- after lstat: Socket { domain: Domain(21), sock_type: SockType(4), protocol: Protocol(0) }
+fuzzer_types::calls::net::Connect: Connect { sockfd: SockFd(3), addr: ArgBuffer([67, 30, 23, 13, 89]), addrlen: BufferLength(5) }
+---- result from fuzzer_types::calls::net::Connect syscall: Err(22)
+---- after lstat: Connect { sockfd: SockFd(3), addr: ArgBuffer([67, 30, 23, 13, 89]), addrlen: BufferLength(5) }
+fuzzer_types::calls::net::Send: Send { sockfd: SockFd(4), buf: ArgBuffer([105, 8, 126, 108, 56, 120, 95, 23]), len: BufferLength(8), flags: MsgFlag(1073858222) }
+---- result from fuzzer_types::calls::net::Send syscall: Err(107)
+---- after lstat: Send { sockfd: SockFd(4), buf: ArgBuffer([105, 8, 126, 108, 56, 120, 95, 23]), len: BufferLength(8), flags: MsgFlag(1073858222) }
+fuzzer_types::calls::net::SendTo: SendTo { sockfd: SockFd(5), buf: ArgBuffer([11, 69, 73, 16, 32, 3, 29, 59, 37, 74, 93]), len: BufferLength(11), flags: MsgFlag(1610624295), dest_addr: ArgBuffer([82, 116, 65, 103, 72, 112, 46, 19, 35, 118, 27]), addrlen: BufferLength(11) }
+---- result from fuzzer_types::calls::net::SendTo syscall: Err(95)
+---- after lstat: SendTo { sockfd: SockFd(5), buf: ArgBuffer([11, 69, 73, 16, 32, 3, 29, 59, 37, 74, 93]), len: BufferLength(11), flags: MsgFlag(1610624295), dest_addr: ArgBuffer([82, 116, 65, 103, 72, 112, 46, 19, 35, 118, 27]), addrlen: BufferLength(11) }
+fuzzer_types::calls::net::RecvFrom: RecvFrom { sockfd: SockFd(6), buf: RetBuffer([0, 0, 0, 0, 0, 0, 0, 0]), len: BufferLength(8), flags: MsgFlag(536894435), src_addr: ArgBuffer([23]), addrlen: BufferLength(1) }
+---- result from fuzzer_types::calls::net::RecvFrom syscall: Err(107)
+---- after lstat: RecvFrom { sockfd: SockFd(6), buf: RetBuffer([0, 0, 0, 0, 0, 0, 0, 0]), len: BufferLength(8), flags: MsgFlag(536894435), src_addr: ArgBuffer([23]), addrlen: BufferLength(1) }
+fuzzer_types::calls::net::Getsockopt: Getsockopt { socket: SockFd(7), level: Level(261), optname: OptName(40), optval: RetBuffer([0, 0, 0, 0, 0, 0, 0, 0, 0]), optlen: 9 }
+---- result from fuzzer_types::calls::net::Getsockopt syscall: Err(92)
+---- after lstat: Getsockopt { socket: SockFd(7), level: Level(261), optname: OptName(40), optval: RetBuffer([0, 0, 0, 0, 0, 0, 0, 0, 0]), optlen: 9 }
+fuzzer_types::calls::net::Setsockopt: Setsockopt { socket: SockFd(8), level: Level(270), optname: OptName(19), optval: ArgBuffer([26, 21, 72]), optlen: BufferLength(3) }
+---- result from fuzzer_types::calls::net::Setsockopt syscall: Err(92)
+---- after lstat: Setsockopt { socket: SockFd(8), level: Level(270), optname: OptName(19), optval: ArgBuffer([26, 21, 72]), optlen: BufferLength(3) }
